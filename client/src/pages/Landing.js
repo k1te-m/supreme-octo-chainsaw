@@ -18,6 +18,7 @@ const Landing = () => {
   }
 
   useEffect(() => {
+    window.scrollTo(0, 0)
     const myFace = setTimeout(() => {
       setLoadWheel(false);
       console.log(loadWheel);
