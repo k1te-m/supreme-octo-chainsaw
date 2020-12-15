@@ -6,9 +6,6 @@ import Navigation from "../Navigation";
 const About = () => {
   return (
     <>
-      <NavButton>
-        <Navigation />
-      </NavButton>
       <AboutContainer className="container">
         <AboutHeader>
           Recent graduate of Northwestern University’s Full Stack Web
@@ -80,7 +77,7 @@ const ContactImg = styled.img`
 const bottomToTop = keyframes`
   from { }
   to {
-    -webkit-transform: translateX(100%); transform: translateX(100%);
+    -webkit-transform: translateY(100%); transform: translateY(100%);
   }
 `
 const AboutContainer = styled.div`
