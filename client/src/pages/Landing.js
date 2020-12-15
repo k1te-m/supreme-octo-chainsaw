@@ -10,7 +10,7 @@ const Landing = () => {
   console.log(loadWheel);
 
   useEffect(() => {
-    const myVar = setTimeout(() => {
+    const myFace = setTimeout(() => {
       setLoadWheel(false);
       console.log(loadWheel);
     }, 2500);
@@ -24,35 +24,65 @@ const Landing = () => {
     );
   } else {
     return (
-      <div>
+      <myDiv>
         <NavButton>
           <Navigation />
         </NavButton>
         <HeaderContainer className="container-fluid landing-head">
           <div className="row">
-            <LandingHeader>He</LandingHeader>
+            <div className="col-12 col-sm-6 col-md-6 col-lg-4">
+              <LandingHeader>WEL</LandingHeader>
+            </div>
           </div>
           <div className="row">
-            <LandingHeader>llo<Period>.</Period></LandingHeader>
+            <div className="col-12 col-sm-6 col-md-6 col-lg-4">
+              <LandingHeader>
+                COME<Period>.</Period>
+              </LandingHeader>
+            </div>
+            {/* <div className="row">
+              <Button>
+                <i class="fas fa-arrow-down"></i>
+              </Button>
+            </div> */}
           </div>
         </HeaderContainer>
-      </div>
+      </myDiv>
     );
   }
 };
 
 const LandingHeader = styled.h1`
-font-size: 350px;
-color: orange;
-`
+  font-size: 100px;
+  color: #dd8f29;
+  @media (min-width: 1200px) {
+      font-size: 350px;
+  }
+`;
 
 const HeaderContainer = styled.div`
-margin: 0 auto;
-height: 100vh;
-width: 50%;
-`
+  margin: 0 auto;
+  height: 100vh;
+  width: 50%;
+`;
 
 const Period = styled.span`
-color: white;`
+  color: white;
+`;
+
+const myDiv = styled.div`
+  margin: 0 auto;
+  height: 100vh;
+`;
+
+const Button = styled.button`
+  font-size: 2rem;
+  width: 75px;
+  background: #45b08c;
+  border: none;
+  color: #1aded7;
+  margin: 0 auto;
+  opacity: 65%;
+`;
 
 export default Landing;
