@@ -19,7 +19,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // MongoDB Connection
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/newportfolio", 
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/portfolio", 
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
