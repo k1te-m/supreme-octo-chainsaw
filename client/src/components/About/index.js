@@ -74,14 +74,7 @@ const ContactImg = styled.img`
   background-color: #45b08c;
 `;
 
-const bottomToTop = keyframes`
-  from { }
-  to {
-    -webkit-transform: translateY(100%); transform: translateY(100%);
-  }
-`
 const AboutContainer = styled.div`
-  animation: ${bottomToTop} 3s ease;
 `
 
 export default About;
