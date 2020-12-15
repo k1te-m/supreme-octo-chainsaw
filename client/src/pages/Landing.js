@@ -3,7 +3,7 @@ import Loading from "../components/Loading";
 import NavButton from "../components/NavButton";
 import Navigation from "../components/Navigation";
 import Particles from "react-particles-js";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 const Landing = () => {
   const [loadWheel, setLoadWheel] = useState(true);
@@ -74,8 +74,16 @@ const LandingHeader2 = styled.h1`
   }
 `;
 
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`
 const HeaderContainer = styled.div`
- 
+ animation: ${fadeIn} 1.5s linear;
 `;
 
 const Period = styled.span`
