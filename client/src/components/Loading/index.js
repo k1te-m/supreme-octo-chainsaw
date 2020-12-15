@@ -13,6 +13,7 @@ const LoadingImage = styled.img.attrs({
   src: "./images/me2.jpg",
 })`
   border-radius: 50%;
+  border: 4px solid orange;
 `;
 
 const rotate = keyframes`
@@ -25,7 +26,10 @@ to {
 }`
 
 const Rotate = styled.div`
-display: inline-block;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
 animation: ${rotate} 2s linear infinite;`
 
 export default Loading;
