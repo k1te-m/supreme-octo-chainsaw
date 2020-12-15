@@ -11,6 +11,7 @@ const Loading = () => {
 
 const LoadingImage = styled.img.attrs({
   src: "./images/me2.jpg",
+  alt: "Kevin"
 })`
   border-radius: 50%;
   border: 4px solid orange;
