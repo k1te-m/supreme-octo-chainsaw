@@ -16,8 +16,9 @@ const Button = styled.button`
 float: right;
 font-size: 3rem;
 width: 75px;
-background: white;
-border: none;`
+background: #16A085;
+border: none;
+color: white;`
 
 
 export default NavButton;
