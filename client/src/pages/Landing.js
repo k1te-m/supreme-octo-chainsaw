@@ -4,7 +4,7 @@ import NavButton from "../components/NavButton";
 import Navigation from "../components/Navigation";
 import Particles from "react-particles-js";
 import styled, { keyframes } from "styled-components";
-import About from "../pages/About";
+import About from "../components/About";
 import { Link } from "react-router-dom";
 
 const Landing = () => {

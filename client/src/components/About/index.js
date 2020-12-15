@@ -1,7 +1,4 @@
 import React from "react";
-import NavButton from "../components/NavButton";
-import Navigation from "../components/Navigation";
-
 
 const About = () => {
     return(
