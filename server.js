@@ -22,6 +22,10 @@ if (process.env.NODE_ENV === "production") {
 // API Routes
 app.use(routes);
 
+app.get("*", function(req, res) {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
+
 // MongoDB Connection
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/portfolio", 
   {
@@ -31,6 +35,8 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/portfolio",
     useFindAndModify: false,
   }
 );
+
+
 
 // Start the Server
 app.listen(PORT, () => {
