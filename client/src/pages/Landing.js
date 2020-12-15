@@ -1,13 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Loading from "../components/Loading";
 import NavButton from "../components/NavButton";
 import Navigation from "../components/Navigation";
 import Particles from "react-particles-js";
 import styled, { keyframes } from "styled-components";
+import About from "../pages/About";
+import { Link } from "react-router-dom";
 
 const Landing = () => {
   const [loadWheel, setLoadWheel] = useState(true);
   console.log(loadWheel);
+
+  const myRef = useRef(null);
+
+  const executeScroll = () => {
+    myRef.current.scrollIntoView();
+  }
 
   useEffect(() => {
     const myFace = setTimeout(() => {
@@ -25,7 +33,6 @@ const Landing = () => {
   } else {
     return (
       <>
-      <welcomeDiv>
         <NavButton>
           <Navigation />
         </NavButton>
@@ -42,13 +49,16 @@ const Landing = () => {
               </LandingHeader2>
             </div>
           </div>
-          <div className="row mt-5">
-            <Button>
+          <Button onClick={executeScroll}>
               <i class="fas fa-arrow-down"></i>
-            </Button>
-          </div>
+          </Button>
         </HeaderContainer>
-      </welcomeDiv>
+        <NavButton>
+          <Navigation />
+        </NavButton>
+        <DescDiv className="container" ref={myRef}>
+            <About/>
+        </DescDiv>
       </>
     );
   }
@@ -85,25 +95,31 @@ const fadeIn = keyframes`
 `
 const HeaderContainer = styled.div`
  animation: ${fadeIn} 1.5s linear;
+ height: 100vh;
 `;
 
 const Period = styled.span`
   color: white;
 `;
 
-const welcomeDiv = styled.div`
+const WelcomeDiv = styled.div`
   margin: 0 auto;
   height: 100vh;
 `;
 
+const DescDiv = styled.div`
+  margin: 0 auto;
+  height: 100vh;
+`
+
 const Button = styled.button`
-  font-size: 2rem;
-  width: 75px;
+  width: 50%;
   background: #45b08c;
   border: none;
   color: #1aded7;
   margin: 0 auto;
   opacity: 65%;
+  font-size: 2rem;
 `;
 
 export default Landing;
