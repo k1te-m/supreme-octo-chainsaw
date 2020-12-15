@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import RepoCard from "../components/RepoCard";
 import API from "../utils/API";
 
 
@@ -7,8 +8,7 @@ const Portfolio = () => {
     let repos = [];
 
     const getRepos = () => {
-        API.getRepos().then(function(response) {
-          console.log(response.data);
+        API.getRepos().then((response) => {
           repos = response.data;
           setRepoState(repos);
         })
@@ -16,10 +16,17 @@ const Portfolio = () => {
       useEffect(() => {
         getRepos();
       }, [])
-
       return (
         <div className="container">
-          Hello
+          <div className="row row-cols-3">
+            
+              {repoState.map(repo => {
+                return (
+                  <RepoCard value={repo} key={repo._id} />
+                )
+              })}
+            
+          </div>
         </div>
       );
 }
