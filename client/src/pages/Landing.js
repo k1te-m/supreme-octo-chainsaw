@@ -28,42 +28,54 @@ const Landing = () => {
         <NavButton>
           <Navigation />
         </NavButton>
-        <HeaderContainer className="container-fluid landing-head">
-          <div className="row">
+        <HeaderContainer className="container landing-head">
+          <div className="row mb-0 pb-0">
             <div className="col-12 col-sm-6 col-md-6 col-lg-4">
-              <LandingHeader>WEL</LandingHeader>
+              <LandingHeader1>WEL</LandingHeader1>
             </div>
           </div>
-          <div className="row">
+          <div className="row mt-0 pt-0 mb-5">
             <div className="col-12 col-sm-6 col-md-6 col-lg-4">
-              <LandingHeader>
+              <LandingHeader2>
                 COME<Period>.</Period>
-              </LandingHeader>
+              </LandingHeader2>
             </div>
-            {/* <div className="row">
+          </div>
+            <div className="row mt-5">
               <Button>
                 <i class="fas fa-arrow-down"></i>
               </Button>
-            </div> */}
-          </div>
+            </div>
+          
         </HeaderContainer>
       </myDiv>
     );
   }
 };
 
-const LandingHeader = styled.h1`
+const LandingHeader1 = styled.h1`
   font-size: 100px;
   color: #dd8f29;
+  margin-top: 175px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
   @media (min-width: 1200px) {
-      font-size: 350px;
+      margin-top: auto;
+      font-size: 250px;
+  }
+`;
+const LandingHeader2 = styled.h1`
+  font-size: 100px;
+  color: #dd8f29;
+  margin-top: 0px;
+  padding-top: px;
+  @media (min-width: 1200px) {
+      font-size: 250px;
   }
 `;
 
 const HeaderContainer = styled.div`
-  margin: 0 auto;
-  height: 100vh;
-  width: 50%;
+ 
 `;
 
 const Period = styled.span`
