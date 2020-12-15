@@ -9,19 +9,17 @@ import { Link } from "react-router-dom";
 
 const Landing = () => {
   const [loadWheel, setLoadWheel] = useState(true);
-  console.log(loadWheel);
 
-  const myRef = useRef(null);
+  const about = useRef(null);
 
   const executeScroll = () => {
-    myRef.current.scrollIntoView();
+    about.current.scrollIntoView();
   }
 
   useEffect(() => {
     window.scrollTo(0, 0)
     const myFace = setTimeout(() => {
       setLoadWheel(false);
-      console.log(loadWheel);
     }, 2500);
   }, []);
 
@@ -57,7 +55,7 @@ const Landing = () => {
         <NavButton>
           <Navigation />
         </NavButton>
-        <DescDiv className="container" ref={myRef}>
+        <DescDiv className="container" ref={about}>
             <About/>
         </DescDiv>
       </>
@@ -122,5 +120,10 @@ const Button = styled.button`
   opacity: 65%;
   font-size: 2rem;
 `;
+
+const WelcomeSpan = styled.span`
+color: white;
+font-size: 35px;
+`
 
 export default Landing;
