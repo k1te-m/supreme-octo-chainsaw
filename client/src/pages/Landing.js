@@ -24,7 +24,8 @@ const Landing = () => {
     );
   } else {
     return (
-      <myDiv>
+      <>
+      <welcomeDiv>
         <NavButton>
           <Navigation />
         </NavButton>
@@ -41,14 +42,14 @@ const Landing = () => {
               </LandingHeader2>
             </div>
           </div>
-            <div className="row mt-5">
-              <Button>
-                <i class="fas fa-arrow-down"></i>
-              </Button>
-            </div>
-          
+          <div className="row mt-5">
+            <Button>
+              <i class="fas fa-arrow-down"></i>
+            </Button>
+          </div>
         </HeaderContainer>
-      </myDiv>
+      </welcomeDiv>
+      </>
     );
   }
 };
@@ -90,7 +91,7 @@ const Period = styled.span`
   color: white;
 `;
 
-const myDiv = styled.div`
+const welcomeDiv = styled.div`
   margin: 0 auto;
   height: 100vh;
 `;
