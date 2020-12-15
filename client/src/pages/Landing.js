@@ -13,7 +13,9 @@ const Landing = () => {
   const about = useRef(null);
 
   const executeScroll = () => {
-    about.current.scrollIntoView();
+    about.current.scrollIntoView({
+      behavior: "smooth",
+    });
   }
 
   useEffect(() => {
