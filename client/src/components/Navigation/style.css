@@ -1,0 +1,12 @@
+.navbar-collapse {
+    width: 100%;
+}
+.navbar-collapse.collapse.show {
+    height: 100vh;
+}
+.navbar-nav {
+    height: 100vh;
+}
+.bg-custom {
+    background-color: #45B08C;
+}
