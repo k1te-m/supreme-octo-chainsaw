@@ -6,6 +6,7 @@ import Particles from "react-particles-js";
 import styled, { keyframes } from "styled-components";
 import About from "../components/About";
 import { Link } from "react-router-dom";
+import SideNav from "../components/SideNav";
 
 const Landing = () => {
   const [loadWheel, setLoadWheel] = useState(true);
@@ -34,6 +35,7 @@ const Landing = () => {
   } else {
     return (
       <>
+        <SideNav />
         <NavButton>
           <Navigation />
         </NavButton>
