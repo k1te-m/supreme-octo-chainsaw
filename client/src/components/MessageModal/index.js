@@ -1,9 +1,6 @@
 import React from "react";
 
 function messageModal({show, children}) {
-
-    
-
     if (show === false) {
         return null;
     } else {
