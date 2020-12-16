@@ -1,7 +1,6 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 
-
 const About = () => {
   return (
     <>
@@ -73,7 +72,6 @@ const ContactImg = styled.img`
   background-color: #45b08c;
 `;
 
-const AboutContainer = styled.div`
-`
+const AboutContainer = styled.div``;
 
 export default About;
