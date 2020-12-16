@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import RepoCard from "../components/RepoCard";
 import API from "../utils/API";
+import styled from "styled-components";
+
+
 
 
 const Portfolio = () => {
@@ -17,7 +20,7 @@ const Portfolio = () => {
         getRepos();
       }, [])
       return (
-        <div className="container">
+        <PortfolioContainer className="container-fluid portfolio">
           <div className="row row-cols-3">
             
               {repoState.map(repo => {
@@ -27,8 +30,13 @@ const Portfolio = () => {
               })}
             
           </div>
-        </div>
+        </PortfolioContainer>
       );
 }
+
+const PortfolioContainer = styled.div`
+height: 100vh;
+overflow: auto;`
+
 
 export default Portfolio;
