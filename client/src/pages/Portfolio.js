@@ -3,8 +3,6 @@ import RepoCard from "../components/RepoCard";
 import API from "../utils/API";
 import styled from "styled-components";
 import Loading from "../components/Loading";
-import NavButton from "../components/NavButton";
-
 
 const Portfolio = () => {
   const [loadWheel, setLoadWheel] = useState(true);
@@ -33,9 +31,6 @@ const Portfolio = () => {
   } else {
     return (
       <>
-        <NavToggleButton>
-          <NavButton />
-        </NavToggleButton>
         <PortfolioContainer className="container-fluid portfolio">
           <div className="row row-cols-3">
             {repoState.map((repo) => {
@@ -57,13 +52,5 @@ const LoadContainer = styled.div`
   overflow: hidden;
 `;
 
-const NavToggleButton = styled.button`
-  float: right;
-  font-size: 3rem;
-  width: 75px;
-  background: #45b08c;
-  border: none;
-  color: #1aded7;
-`;
 
 export default Portfolio;

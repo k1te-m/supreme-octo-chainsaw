@@ -1,11 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import Loading from "../components/Loading";
-import NavButton from "../components/NavButton";
-import Navigation from "../components/Navigation";
+
 import Particles from "react-particles-js";
 import styled, { keyframes } from "styled-components";
 import About from "../components/About";
-import { Link } from "react-router-dom";
 import SideNav from "../components/SideNav";
 
 const Landing = () => {
@@ -23,7 +21,7 @@ const Landing = () => {
     window.scrollTo(0, 0);
     const myFace = setTimeout(() => {
       setLoadWheel(false);
-    }, 2500);
+    }, 2000);
   }, []);
 
   if (loadWheel === true) {
@@ -36,9 +34,7 @@ const Landing = () => {
     return (
       <>
         <SideNav />
-        <NavButton>
-          <Navigation />
-        </NavButton>
+
         <HeaderContainer className="container landing-head">
           <div className="row mb-0 pb-0">
             <div className="col-12 col-sm-6 col-md-6 col-lg-4">
@@ -57,9 +53,6 @@ const Landing = () => {
           </Button>
         </HeaderContainer>
 
-        <NavButton>
-          <Navigation />
-        </NavButton>
         <DescDiv className="container" ref={about}>
           <About />
         </DescDiv>
@@ -120,6 +113,15 @@ const Button = styled.button`
   opacity: 65%;
   font-size: 2rem;
 `;
+
+// const NavToggleButton = styled.button`
+//   float: right;
+//   font-size: 3rem;
+//   width: 75px;
+//   background: #45b08c;
+//   border: none;
+//   color: #1aded7;
+// `;
 
 const LoadContainer = styled.div`
   overflow: hidden;
