@@ -16,10 +16,10 @@ const Landing = () => {
     about.current.scrollIntoView({
       behavior: "smooth",
     });
-  }
+  };
 
   useEffect(() => {
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
     const myFace = setTimeout(() => {
       setLoadWheel(false);
     }, 2500);
@@ -27,9 +27,9 @@ const Landing = () => {
 
   if (loadWheel === true) {
     return (
-      <div>
+      <LoadContainer>
         <Loading />
-      </div>
+      </LoadContainer>
     );
   } else {
     return (
@@ -51,14 +51,15 @@ const Landing = () => {
             </div>
           </div>
           <Button onClick={executeScroll}>
-              <i class="fas fa-arrow-down"></i>
+            <i class="fas fa-arrow-down"></i>
           </Button>
         </HeaderContainer>
+
         <NavButton>
           <Navigation />
         </NavButton>
         <DescDiv className="container" ref={about}>
-            <About/>
+          <About />
         </DescDiv>
       </>
     );
@@ -72,8 +73,8 @@ const LandingHeader1 = styled.h1`
   margin-bottom: 0px;
   padding-bottom: 0px;
   @media (min-width: 1200px) {
-      margin-top: auto;
-      font-size: 250px;
+    margin-top: auto;
+    font-size: 250px;
   }
 `;
 const LandingHeader2 = styled.h1`
@@ -82,7 +83,7 @@ const LandingHeader2 = styled.h1`
   margin-top: 0px;
   padding-top: px;
   @media (min-width: 1200px) {
-      font-size: 250px;
+    font-size: 250px;
   }
 `;
 
@@ -93,25 +94,20 @@ const fadeIn = keyframes`
   to {
     opacity: 1;
   }
-`
+`;
 const HeaderContainer = styled.div`
- animation: ${fadeIn} 1.5s linear;
- height: 100vh;
+  animation: ${fadeIn} 1.5s linear;
+  height: 100vh;
 `;
 
 const Period = styled.span`
   color: white;
 `;
 
-const WelcomeDiv = styled.div`
-  margin: 0 auto;
-  height: 100vh;
-`;
-
 const DescDiv = styled.div`
   margin: 0 auto;
   height: 100vh;
-`
+`;
 
 const Button = styled.button`
   width: 50%;
@@ -123,9 +119,8 @@ const Button = styled.button`
   font-size: 2rem;
 `;
 
-const WelcomeSpan = styled.span`
-color: white;
-font-size: 35px;
-`
+const LoadContainer = styled.div`
+  overflow: hidden;
+`;
 
 export default Landing;
