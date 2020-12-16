@@ -31,6 +31,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 height: 100vh;
-animation: ${rotate} 2s linear infinite;`
+animation: ${rotate} 2s linear infinite;
+`
 
 export default Loading;
