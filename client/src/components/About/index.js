@@ -1,7 +1,6 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import NavButton from "../NavButton";
-import Navigation from "../Navigation";
+
 
 const About = () => {
   return (
