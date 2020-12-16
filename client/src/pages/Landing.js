@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Loading from "../components/Loading";
-
+import Navigation from "../components/Navigation";
 import Particles from "react-particles-js";
 import styled, { keyframes } from "styled-components";
 import About from "../components/About";
@@ -34,7 +34,7 @@ const Landing = () => {
     return (
       <>
         <SideNav />
-
+        <Navigation />
         <HeaderContainer className="container landing-head">
           <div className="row mb-0 pb-0">
             <div className="col-12 col-sm-6 col-md-6 col-lg-4">
@@ -52,8 +52,8 @@ const Landing = () => {
             <i class="fas fa-arrow-down"></i>
           </Button>
         </HeaderContainer>
-
-        <DescDiv className="container" ref={about}>
+        
+        <DescDiv className="container-fluid" ref={about}>
           <About />
         </DescDiv>
       </>
@@ -101,7 +101,7 @@ const Period = styled.span`
 
 const DescDiv = styled.div`
   margin: 0 auto;
-  height: 100vh;
+  height: 90vh;
 `;
 
 const Button = styled.button`

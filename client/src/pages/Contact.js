@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import API from "../utils/API";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import MessageModal from "../components/MessageModal";
+import Navigation from "../components/Navigation";
 
 const Contact = () => {
     const [messageObject, setMessageObject] = useState({
@@ -67,6 +68,8 @@ const Contact = () => {
       }
     
       return (
+        <>
+        <Navigation />
         <div className="container" id="contactMe">
           <div className="row">
             <div className="col-12">
@@ -131,6 +134,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
+        </>
       );
 }
 

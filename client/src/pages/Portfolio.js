@@ -3,6 +3,7 @@ import RepoCard from "../components/RepoCard";
 import API from "../utils/API";
 import styled from "styled-components";
 import Loading from "../components/Loading";
+import Navigation from "../components/Navigation";
 
 const Portfolio = () => {
   const [loadWheel, setLoadWheel] = useState(true);
@@ -19,7 +20,7 @@ const Portfolio = () => {
     getRepos();
     const myFace = setTimeout(() => {
       setLoadWheel(false);
-    }, 1000);
+    }, 1500);
   }, []);
 
   if (loadWheel === true) {
@@ -31,6 +32,7 @@ const Portfolio = () => {
   } else {
     return (
       <>
+        <Navigation />
         <PortfolioContainer className="container-fluid portfolio">
           <div className="row row-cols-3">
             {repoState.map((repo) => {
