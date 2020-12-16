@@ -1,7 +1,6 @@
 import React from "react";
 
 const RepoCard = ({ value }) => {
-  console.log(value);
   return (
     <div className="card">
       <img className="card-img-top" src={value.imageURL} alt={value.name} />

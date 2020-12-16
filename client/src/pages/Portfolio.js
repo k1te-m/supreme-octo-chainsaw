@@ -14,7 +14,6 @@ const Portfolio = () => {
     API.getRepos().then((response) => {
       repos = response.data;
       setRepoState(repos);
-      console.log(repoState);
     });
   };
   useEffect(() => {
