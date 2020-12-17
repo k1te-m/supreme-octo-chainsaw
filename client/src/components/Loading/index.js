@@ -9,8 +9,12 @@ const Loading = () => {
   )
 };
 
+const loadImages = ["./images/cooper1.jpg", "./images/cooper2.jpg", "./images/cooper3.jpg", "./images/me2.jpg",];
+
+const randImg = Math.floor(Math.random() * loadImages.length);
+
 const LoadingImage = styled.img.attrs({
-  src: "./images/me2.jpg",
+  src: loadImages[randImg],
   alt: "Kevin"
 })`
   border-radius: 50%;
