@@ -34,11 +34,14 @@ const Portfolio = () => {
     return (
       <>
         <Navigation />
-        <PortfolioContainer className="container-fluid portfolio">
+        <PortfolioContainer className="container portfolio">
+          <h1>Portfolio</h1>
           <div className="row row-cols-3">
-            {repoState.map((repo) => {
-              return <RepoCard value={repo} key={repo._id} />;
-            })}
+            
+              {repoState.map((repo) => {
+                return <RepoCard value={repo} key={repo._id} />;
+              })}
+            
           </div>
         </PortfolioContainer>
       </>
@@ -47,8 +50,9 @@ const Portfolio = () => {
 };
 
 const PortfolioContainer = styled.div`
-  height: 100vh;
   overflow: auto;
+  margin-top: 1.5rem;
+  padding-bottom: 60px;
 `;
 
 const LoadContainer = styled.div`
