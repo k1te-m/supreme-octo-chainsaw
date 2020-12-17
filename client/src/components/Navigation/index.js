@@ -7,6 +7,7 @@ const hamburgerStyle = {
     fontSize: "3rem",
     color: "aqua",
     border: "none",
+    marginRight: "10px",
 }
 
 const Navigation = () => {
@@ -23,7 +24,7 @@ const Navigation = () => {
         style={hamburgerStyle}
       >
         {/* <span className="navbar-toggler-icon"></span> */}
-        <i className="fas fa-bars" style={hamburgerStyle}></i>
+        <i className="fas fa-bars"></i>
       </button>
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav">
