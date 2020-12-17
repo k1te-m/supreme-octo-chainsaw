@@ -35,6 +35,7 @@ const Landing = () => {
       <>
         <SideNav />
         <Navigation />
+
         <HeaderContainer className="container landing-head">
           <div className="row mb-0 pb-0">
             <div className="col-12 col-sm-6 col-md-6 col-lg-4">
@@ -51,11 +52,11 @@ const Landing = () => {
           <Button onClick={executeScroll}>
             <i class="fas fa-arrow-down"></i>
           </Button>
-        </HeaderContainer>
+          </HeaderContainer>
+          <DescDiv className="container-fluid" ref={about}>
+            <About />
+          </DescDiv>
         
-        <DescDiv className="container-fluid" ref={about}>
-          <About />
-        </DescDiv>
       </>
     );
   }
@@ -92,7 +93,7 @@ const fadeIn = keyframes`
 `;
 const HeaderContainer = styled.div`
   animation: ${fadeIn} 1.5s linear;
-  height: 100vh;
+  height: 700px;
 `;
 
 const Period = styled.span`
@@ -101,7 +102,7 @@ const Period = styled.span`
 
 const DescDiv = styled.div`
   margin: 0 auto;
-  height: 90vh;
+  height: auto;
 `;
 
 const Button = styled.button`
