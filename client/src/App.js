@@ -4,10 +4,17 @@ import Landing from "./pages/Landing";
 import GlobalStyle from "./components/GlobalStyle";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
+import About from "./components/About";
 
 function App() {
   return (
-    <>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center"
+      }}
+    >
       <GlobalStyle />
       <Router>
         <Switch>
@@ -20,9 +27,12 @@ function App() {
           <Route exact path="/contact">
             <Contact />
           </Route>
+          <Route exact path="/about">
+            <About />
+          </Route>
         </Switch>
       </Router>
-    </>
+    </div>
   );
 }
 
