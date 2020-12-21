@@ -36,7 +36,6 @@ const CardStyled = styled.div`
 const RepoImg = styled.img`
   width: 385px;
   height: 440px;
-  object-fit: cover;
 `;
 
 export default RepoCard;
