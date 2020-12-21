@@ -30,6 +30,7 @@ const SideNavStyle = styled.div`
   margin-left: 1rem;
   position: fixed;
   top: 2.9rem;
+  left: -1rem;
   ul {
     list-style: none;
   }
