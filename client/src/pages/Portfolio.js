@@ -32,31 +32,23 @@ const Portfolio = () => {
     );
   } else {
     return (
-      <>
+      <div className="container-fluid">
         <Navigation />
-        <PortfolioContainer className="container portfolio">
-          <h1>Portfolio</h1>
-          <div className="row row-cols-3">
-            
+          <PortfolioRow className="row row-cols-3 justify-content-center">
               {repoState.map((repo) => {
                 return <RepoCard value={repo} key={repo._id} />;
               })}
-            
-          </div>
-        </PortfolioContainer>
-      </>
+          </PortfolioRow>
+      </div>
     );
   }
 };
 
-const PortfolioContainer = styled.div`
-  overflow: auto;
-  margin-top: 1.5rem;
-  padding-bottom: 60px;
+const PortfolioRow = styled.div`
+  margin-top: 11%;
 `;
 
 const LoadContainer = styled.div`
-  overflow: hidden;
 `;
 
 
