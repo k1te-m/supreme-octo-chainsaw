@@ -5,6 +5,7 @@ import Particles from "react-particles-js";
 import styled, { keyframes } from "styled-components";
 import About from "../components/About";
 import SideNav from "../components/SideNav";
+import { Link } from "react-router-dom";
 
 const Landing = () => {
   const [loadWheel, setLoadWheel] = useState(true);
@@ -24,6 +25,17 @@ const Landing = () => {
     }, 2000);
   }, []);
 
+  const arrowStyle = {
+    width: "50%",
+    background: "#45b08c",
+    border: "none",
+    color: "#1aded7",
+    margin: "0 auto",
+    opacity: "65%",
+    fontSize: "2rem",
+    float: "right"
+  }
+
   if (loadWheel === true) {
     return (
       <LoadContainer>
@@ -33,7 +45,7 @@ const Landing = () => {
   } else {
     return (
       <>
-        <SideNav />
+        {/* <SideNav /> */}
         <Navigation />
 
         <HeaderContainer className="container landing-head">
@@ -49,13 +61,10 @@ const Landing = () => {
               </LandingHeader2>
             </div>
           </div>
-          <Button onClick={executeScroll}>
+          <Link to="/about" style={arrowStyle}>
             <i class="fas fa-arrow-down"></i>
-          </Button>
+          </Link>
           </HeaderContainer>
-          <DescDiv className="container-fluid" ref={about}>
-            <About />
-          </DescDiv>
         
       </>
     );
@@ -64,7 +73,7 @@ const Landing = () => {
 
 const LandingHeader1 = styled.h1`
   font-size: 100px;
-  color: #dd8f29;
+  color: #E9C46A;
   margin-top: 175px;
   margin-bottom: 0px;
   padding-bottom: 0px;
@@ -75,7 +84,7 @@ const LandingHeader1 = styled.h1`
 `;
 const LandingHeader2 = styled.h1`
   font-size: 100px;
-  color: #dd8f29;
+  color: #E9C46A;
   margin-top: 0px;
   padding-top: px;
   @media (min-width: 1200px) {
@@ -93,36 +102,13 @@ const fadeIn = keyframes`
 `;
 const HeaderContainer = styled.div`
   animation: ${fadeIn} 1.5s linear;
-  height: 700px;
+  height: 100vh;
 `;
 
 const Period = styled.span`
   color: white;
 `;
 
-const DescDiv = styled.div`
-  margin: 0 auto;
-  height: auto;
-`;
-
-const Button = styled.button`
-  width: 50%;
-  background: #45b08c;
-  border: none;
-  color: #1aded7;
-  margin: 0 auto;
-  opacity: 65%;
-  font-size: 2rem;
-`;
-
-// const NavToggleButton = styled.button`
-//   float: right;
-//   font-size: 3rem;
-//   width: 75px;
-//   background: #45b08c;
-//   border: none;
-//   color: #1aded7;
-// `;
 
 const LoadContainer = styled.div`
   overflow: hidden;
