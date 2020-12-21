@@ -30,7 +30,7 @@ const PortfolioCard = () => {
 
 const Card = styled.div`
   width: 18rem;
-  border: 2px solid #e6aa68;
+  border: 2px solid #E6AA68;
   background: #fffbbd;
 `;
 
