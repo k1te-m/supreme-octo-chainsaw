@@ -73,7 +73,7 @@ const Landing = () => {
 
 const LandingHeader1 = styled.h1`
   font-size: 100px;
-  color: #E9C46A;
+  color: #E6AA68;
   margin-top: 175px;
   margin-bottom: 0px;
   padding-bottom: 0px;
@@ -84,7 +84,7 @@ const LandingHeader1 = styled.h1`
 `;
 const LandingHeader2 = styled.h1`
   font-size: 100px;
-  color: #E9C46A;
+  color: #E6AA68;
   margin-top: 0px;
   padding-top: px;
   @media (min-width: 1200px) {
@@ -111,7 +111,6 @@ const Period = styled.span`
 
 
 const LoadContainer = styled.div`
-  overflow: hidden;
 `;
 
 export default Landing;
