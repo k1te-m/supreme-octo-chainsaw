@@ -28,7 +28,9 @@ const About = () => {
   return (
     <>
       <SideNav />
-      <Navigation />
+      <NavigationContainer>
+        <Navigation />
+      </NavigationContainer>
       <SlideInUpDiv>
         <AboutContainer className="container">
           <AboutHeader>My name is Kevin Miller.</AboutHeader>
@@ -152,5 +154,11 @@ const SlideInLeftDiv = styled.div`
   }
   animation: ${slideInLeft} 3s ease-in-out;
 `;
+
+const NavigationContainer = styled.div`
+position: fixed;
+top: 0%;
+right: 0%;
+`
 
 export default About;
