@@ -1,5 +1,6 @@
 import React from "react";
-import styled from "styled-components";
+import { Link } from "react-router-dom";
+import styled, { keyframes } from "styled-components";
 
 const ContactCard = () => {
   const centered = {
@@ -8,11 +9,13 @@ const ContactCard = () => {
   };
   return (
     <Card className="card">
-      <ContactImg
-        className="card-img-top"
-        src="../images/contact.png"
-        alt="Card image cap"
-      />
+      <Link to="/contact" style={centered}>
+        <ContactImg
+          className="card-img-top"
+          src="../images/contact.png"
+          alt="Card image cap"
+        />
+      </Link>
       <div className="card-body">
         <CardTitle className="card-title" style={centered}>
           Contact
@@ -40,11 +43,28 @@ const ContactCard = () => {
   );
 };
 
+const shake = keyframes`
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+`;
+
 const Card = styled.div`
   width: 140px;
   height: 140px;
   border: 2px solid #e6aa68;
   background: #fffbbd;
+  img:hover {
+    animation ${shake} 0.5s infinite;
+  }
   @media (min-width: 576px) {
     height: 200px;
     width: 200px;
@@ -83,22 +103,18 @@ const ContactImg = styled.img`
 
 const CardTitle = styled.h1`
   font-size: 20px;
-  
-@media (min-width: 576px) {
- 
-}
-@media (min-width: 768px) {
-  font-size: 25px;
-}
-@media (min-width: 992px) {
-  font-size: 30px;
-}
-@media (min-width: 1200px) {
-} ;
-`
 
-// const ListItem = styled.li`
-//   background: #fffbbd;
-// `;
+  @media (min-width: 576px) {
+  }
+  @media (min-width: 768px) {
+    font-size: 25px;
+  }
+  @media (min-width: 992px) {
+    font-size: 30px;
+  }
+  @media (min-width: 1200px) {
+  } ;
+`;
+
 
 export default ContactCard;
