@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
+import ParticlesBg from "particles-bg";
 
 const Loading = () => {
   return (
-    <Rotate className="container">
-        <LoadingImage />
-    </Rotate>
+    <>
+      <Rotate className="container">
+          <LoadingImage />
+      </Rotate>
+      <ParticlesBg  color="#ffa500" type="cobweb" bg={true} />
+    </>
   )
 };
 
