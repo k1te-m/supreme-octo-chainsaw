@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { Link } from "react-router-dom";
 import "./style.css"
 
@@ -12,7 +12,7 @@ const hamburgerStyle = {
 
 const Navigation = () => {
   return (
-    <nav className="navbar navbar-light fixed-top bg-custom justify-content-end">
+    <NavNav className="navbar navbar-light fixed-top bg-custom justify-content-end">
       <button
         className="navbar-toggler"
         type="button"
@@ -53,8 +53,21 @@ const Navigation = () => {
           </li>
         </ul>
       </div>
-    </nav>
+    </NavNav>
   );
 };
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
+const NavNav = styled.nav`
+  animation: ${fadeIn} 2s ease-in-out;
+`
 
 export default Navigation;
