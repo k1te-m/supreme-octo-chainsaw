@@ -1,5 +1,6 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+import { Link } from "react-router-dom";
 
 const PortfolioCard = () => {
   const centered = {
@@ -8,11 +9,13 @@ const PortfolioCard = () => {
   };
   return (
     <Card className="card">
-      <PortfolioImg
-        className="card-img-top"
-        src="../images/cloud.png"
-        alt="Code Cloud"
-      />
+      <Link to="/portfolio" style={centered}>
+        <PortfolioImg
+          className="card-img-top"
+          src="../images/cloud.png"
+          alt="Code Cloud"
+        />
+      </Link>
       <div className="card-body">
         <CardTitle className="card-title" style={centered}>
           Portfolio
@@ -30,11 +33,20 @@ const PortfolioCard = () => {
   );
 };
 
+const pulse = keyframes`
+  from { transfrom: scale(1); }
+  50% { transform: scale(.85); }
+  to { transform: scale(1);}
+`
+
 const Card = styled.div`
   height: 140px;
   width: 140px;
   border: 2px solid #e6aa68;
   background: #fffbbd;
+  img:hover {
+    animation: ${pulse} 1s infinite;
+  }
   @media (min-width: 576px) {
     height: 200px;
     width: 200px;
