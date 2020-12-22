@@ -52,6 +52,8 @@ const Card = styled.div`
 `;
 
 const CardTitle = styled.h1`
+  font-size: 20px;
+
 @media (min-width: 576px) {
  
 }
