@@ -3,7 +3,7 @@ import Loading from "../components/Loading";
 import Navigation from "../components/Navigation";
 import Particles from "react-particles-js";
 import styled, { keyframes } from "styled-components";
-import About from "../components/About";
+import About from "../pages/About"
 import SideNav from "../components/SideNav";
 import { Link } from "react-router-dom";
 
