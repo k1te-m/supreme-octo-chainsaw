@@ -3,7 +3,7 @@ import styled, { keyframes } from "styled-components";
 
 const Loading = () => {
   return (
-    <Rotate>
+    <Rotate className="container">
         <LoadingImage />
     </Rotate>
   )

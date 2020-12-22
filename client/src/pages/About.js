@@ -1,14 +1,30 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 import Navigation from "../components/Navigation";
 import ContactCard from "../components/ContactCard";
 import SideNav from "../components/SideNav";
-// import PortfolioCard from "../PortfolioCard";
-import { Link } from "react-router-dom";
 import "./style.css";
 import PortfolioCard from "../components/PortfolioCard";
+import Loading from "../components/Loading";
 
 const About = () => {
+  const [loadWheel, setLoadWheel] = useState(true);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    const myFace = setTimeout(() => {
+      setLoadWheel(false);
+    }, 2000);
+  }, []);
+
+  if (loadWheel === true) {
+    return (
+      <div>
+        <Loading />
+      </div>
+    );
+  }
+
   return (
     <>
       <SideNav />
@@ -16,9 +32,6 @@ const About = () => {
       <SlideInUpDiv>
         <AboutContainer className="container">
           <AboutHeader>My name is Kevin Miller.</AboutHeader>
-          <Link to="/portfolio" className="arrow">
-            <i class="fas fa-arrow-down"></i>
-          </Link>
         </AboutContainer>
       </SlideInUpDiv>
       <SlideInRightDiv>
@@ -74,7 +87,7 @@ to {
 `;
 
 const SlideInUpDiv = styled.div`
-  animation: ${slideInUP} 2s linear;
+  animation: ${slideInUP} 2s ease-in-out;
 `;
 
 const SlideInRightDiv = styled.div`
@@ -101,7 +114,7 @@ const SlideInRightDiv = styled.div`
     bottom: 3%;
     right: 10%;
   }
-  animation: ${slideInRight} 3s linear;
+  animation: ${slideInRight} 3s ease-in-out;
 `;
 
 const slideInLeft = keyframes`
@@ -137,7 +150,7 @@ const SlideInLeftDiv = styled.div`
     bottom: 3%;
     left: 10%;
   }
-  animation: ${slideInLeft} 3s linear;
+  animation: ${slideInLeft} 3s ease-in-out;
 `;
 
 export default About;
