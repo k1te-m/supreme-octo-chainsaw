@@ -4,7 +4,7 @@ import Landing from "./pages/Landing";
 import GlobalStyle from "./components/GlobalStyle";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
-import About from "./components/About";
+import About from "./pages/About";
 
 function App() {
   return (

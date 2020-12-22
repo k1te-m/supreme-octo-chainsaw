@@ -1,11 +1,12 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import Navigation from "../Navigation";
-import ContactCard from "../ContactCard";
-import SideNav from "../SideNav";
+import Navigation from "../components/Navigation";
+import ContactCard from "../components/ContactCard";
+import SideNav from "../components/SideNav";
 // import PortfolioCard from "../PortfolioCard";
 import { Link } from "react-router-dom"
 import "./style.css";
+import PortfolioCard from "../components/PortfolioCard";
 
 const About = () => {
   return (
@@ -20,9 +21,9 @@ const About = () => {
           </Link>
         </AboutContainer>
       </SlideInUpDiv>
-      {/* <SlideInRightDiv>
-        
-      </SlideInRightDiv> */}
+      <SlideInRightDiv>
+        <PortfolioCard />
+      </SlideInRightDiv>
       <SlideInLeftDiv>
         <ContactCard />
       </SlideInLeftDiv>
@@ -53,7 +54,7 @@ const AboutContainer = styled.div``;
 const slideInUP = keyframes`
 from {
   opacity: 0;
-  transform: translate3d(0, 500%, 0);
+  transform: translate3d(0, 100%, 0);
   visibility: 'visible'
 }
 to {
@@ -62,33 +63,36 @@ to {
 }
 `;
 
-// const slideInRight = keyframes`
-// from {
-//   transform: translate3d(1000%, 0, 0);
-//   visibility: 'visible'
-// }
-// to {
-//   transform: translate3d(0, 0, 0);
-// }
-// `;
+const slideInRight = keyframes`
+from {
+  transform: translate3d(1000%, 0, 0);
+  visibility: 'visible'
+}
+to {
+  transform: translate3d(0, 0, 0);
+}
+`;
 
 const SlideInUpDiv = styled.div`
   animation: ${slideInUP} 2s linear;
 `;
 
-// const SlideInRightDiv = styled.div`
-//   @media (min-width: 992px) {
-//   position: fixed;
-//   right: 5%;
-//   top: 10%;
-//   }
-//   @media (min-width: 1200px) {
-//   position: fixed;
-//   top: 10%;
-//   right: 10%;
-//   }
-//   animation: ${slideInRight} 3s linear;
-// `;
+const SlideInRightDiv = styled.div`
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  @media (min-width: 992px) {
+  position: fixed;
+  right: 10%;
+  bottom: 0%;
+  }
+  @media (min-width: 1200px) {
+  position: fixed;
+  bottom: 3%;
+  right: 10%;
+  }
+  animation: ${slideInRight} 3s linear;
+`;
 
 const slideInLeft = keyframes`
 from {
