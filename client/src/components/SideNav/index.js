@@ -34,13 +34,22 @@ const pulse = keyframes`
     to { transform: scale(1);}
 `;
 
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
 const SideNavStyle = styled.div`
   margin-top: 5rem;
   margin-left: 1rem;
   position: fixed;
   top: -1rem;
   left: -1rem;
-  
+  animation: ${fadeIn} 2s ease-in-out;
   @media (min-width: 576px) {
     top: 1.5rem;
   }
