@@ -6,6 +6,7 @@ import SideNav from "../components/SideNav";
 import "./style.css";
 import PortfolioCard from "../components/PortfolioCard";
 import Loading from "../components/Loading";
+import ParticlesBg from "particles-bg";
 
 const About = () => {
   const [loadWheel, setLoadWheel] = useState(true);
@@ -40,9 +41,10 @@ const About = () => {
       <SlideInLeftDiv>
         <ContactCard />
       </SlideInLeftDiv>
+      <ParticlesBg color="#ffa500" num={100} type="cobweb" bg={true} />
     </>
   );
-};
+}; 
 
 const AboutHeader = styled.h1`
   font-size: 25px;

@@ -8,7 +8,7 @@ const Loading = () => {
       <Rotate className="container">
           <LoadingImage />
       </Rotate>
-      <ParticlesBg  color="#ffa500" type="cobweb" bg={true} />
+      <ParticlesBg  color="#ffa500" type="cobweb" num={100} bg={true} />
     </>
   )
 };
