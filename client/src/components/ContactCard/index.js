@@ -82,6 +82,8 @@ const ContactImg = styled.img`
 `;
 
 const CardTitle = styled.h1`
+  font-size: 20px;
+  
 @media (min-width: 576px) {
  
 }
