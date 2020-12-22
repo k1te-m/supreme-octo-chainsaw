@@ -5,6 +5,7 @@ import GlobalStyle from "./components/GlobalStyle";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
+import ParticlesBg from "particles-bg";
 
 function App() {
   return (
@@ -32,7 +33,9 @@ function App() {
           </Route> */}
         </Switch>
       </Router>
+      <ParticlesBg  color="#ffa500" type="cobweb" num={100} bg={true} />
     </div>
+    
   );
 }
 
