@@ -4,7 +4,7 @@ import Navigation from "../components/Navigation";
 import ContactCard from "../components/ContactCard";
 import SideNav from "../components/SideNav";
 // import PortfolioCard from "../PortfolioCard";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 import "./style.css";
 import PortfolioCard from "../components/PortfolioCard";
 
@@ -33,7 +33,7 @@ const About = () => {
 
 const AboutHeader = styled.h1`
   font-size: 25px;
-  color: #E6AA68;
+  color: #e6aa68;
   text-align: center;
   @media (min-width: 576px) {
     font-size: 35px;
@@ -81,15 +81,25 @@ const SlideInRightDiv = styled.div`
   position: fixed;
   bottom: 5%;
   right: 5%;
+  @media (min-width: 576px) {
+    position: fixed;
+    bottom: 3%;
+    right: 5%;
+  }
+  @media (min-width: 768px) {
+    position: fixed;
+    bottom: 3%;
+    right: 5%;
+  }
   @media (min-width: 992px) {
-  position: fixed;
-  right: 10%;
-  bottom: 0%;
+    position: fixed;
+    right: 10%;
+    bottom: 5%;
   }
   @media (min-width: 1200px) {
-  position: fixed;
-  bottom: 3%;
-  right: 10%;
+    position: fixed;
+    bottom: 3%;
+    right: 10%;
   }
   animation: ${slideInRight} 3s linear;
 `;
@@ -106,14 +116,28 @@ to {
 const SlideInLeftDiv = styled.div`
   position: fixed;
   bottom: 5%;
-  left: 10%;
+  left: 5%;
   @media (min-width: 576px) {
     position: fixed;
     bottom: 3%;
     left: 5%;
   }
+  @media (min-width: 768px) {
+    position: fixed;
+    bottom: 3%;
+    left: 5%;
+  }
+  @media (min-width: 992px) {
+    position: fixed;
+    left: 10%;
+    bottom: 5%;
+  }
+  @media (min-width: 1200px) {
+    position: fixed;
+    bottom: 3%;
+    left: 10%;
+  }
   animation: ${slideInLeft} 3s linear;
 `;
-
 
 export default About;
