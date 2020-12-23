@@ -6,6 +6,8 @@ import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import ParticlesBg from "particles-bg";
+import AlertState from "./context/Alert/AlertState";
+import Alert from "./components/Alerts";
 
 function App() {
   return (
@@ -13,29 +15,28 @@ function App() {
       style={{
         display: "flex",
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
       }}
     >
       <GlobalStyle />
-      <Router>
-        <Switch>
-          <Route exact path="/">
-            <About />
-          </Route>
-          <Route exact path="/portfolio">
-            <Portfolio />
-          </Route>
-          <Route exact path="/contact">
-            <Contact />
-          </Route>
-          {/* <Route exact path="/about">
-            <About />
-          </Route> */}
-        </Switch>
-      </Router>
-      <ParticlesBg  color="#ffa500" type="cobweb" num={35} bg={true} />
+      <AlertState>
+        <Router>
+          <Alert />
+          <Switch>
+            <Route exact path="/">
+              <About />
+            </Route>
+            <Route exact path="/portfolio">
+              <Portfolio />
+            </Route>
+            <Route exact path="/contact">
+              <Contact />
+            </Route>
+          </Switch>
+        </Router>
+        <ParticlesBg color="#ffa500" type="cobweb" num={35} bg={true} />
+      </AlertState>
     </div>
-    
   );
 }
 
