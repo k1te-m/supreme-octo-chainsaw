@@ -50,16 +50,16 @@ const AboutHeader = styled.h1`
   font-size: 25px;
   color: #e6aa68;
   text-align: center;
-  @media (min-width: 576px) {
+  @media screen and (min-width: 576px) {
     font-size: 35px;
   }
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     font-size: 45px;
   }
-  @media (min-width: 992px) {
+  @media screen and (min-width: 992px) {
     font-size: 65px;
   }
-  @media (min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     font-size: 65px;
   }
 `;
@@ -96,22 +96,22 @@ const SlideInRightDiv = styled.div`
   position: fixed;
   bottom: 5%;
   right: 5%;
-  @media (min-width: 576px) {
+  @media screen and (min-width: 576px) {
     position: fixed;
     bottom: 3%;
     right: 5%;
   }
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     position: fixed;
     bottom: 3%;
     right: 5%;
   }
-  @media (min-width: 992px) {
+  @media screen and (min-width: 992px) {
     position: fixed;
     right: 10%;
     bottom: 5%;
   }
-  @media (min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     position: fixed;
     bottom: 3%;
     right: 10%;
@@ -132,22 +132,22 @@ const SlideInLeftDiv = styled.div`
   position: fixed;
   bottom: 5%;
   left: 5%;
-  @media (min-width: 576px) {
+  @media screen and (min-width: 576px) {
     position: fixed;
     bottom: 3%;
     left: 5%;
   }
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     position: fixed;
     bottom: 3%;
     left: 5%;
   }
-  @media (min-width: 992px) {
+  @media screen and (min-width: 992px) {
     position: fixed;
     left: 10%;
     bottom: 5%;
   }
-  @media (min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     position: fixed;
     bottom: 3%;
     left: 10%;
