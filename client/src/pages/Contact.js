@@ -1,35 +1,28 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import API from "../utils/API";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import MessageModal from "../components/MessageModal";
 import Navigation from "../components/Navigation";
 import styled from "styled-components";
-import AlertModal from "../components/AlertModal";
+import AlertContext from "../context/Alert/alertContext";
 
 const Contact = () => {
+  const alertContext = useContext(AlertContext);
+
+  const { setAlert } = alertContext;
+
   const [messageObject, setMessageObject] = useState({
     name: "",
     email: "",
     message: "",
   });
+
+  const { name, email, message } = messageObject;
+
   const [messageModal, setMessageModal] = useState({
     show: false,
   });
   const [displayOptions, setDisplayOptions] = useState({
-    display: "none",
-    zIndex: "2",
-    position: "fixed",
-    top: "20%",
-    left: "20%",
-    maxWidth: "50%",
-    height: "250px",
-  });
-
-  const [alertModal, setAlertModal] = useState({
-    show: false,
-  })
-
-  const [displayAlertOptions, setDisplayAlertOptions] = useState({
     display: "none",
     zIndex: "2",
     position: "fixed",
@@ -54,19 +47,14 @@ const Contact = () => {
     setDisplayOptions({ ...displayOptions, display: "block" });
   };
 
-  const openAlertModal = () => {
-    setAlertModal(true);
-    setDisplayAlertOptions({ ...displayAlertOptions, display: "block" });
-  };
-
-  const handleAlertClose = () => {
-    setAlertModal(false);
-    setDisplayAlertOptions({...displayAlertOptions, display: "none"});
-  }
-
   const handleFormSubmit = (event) => {
     event.preventDefault();
-    if (messageObject.name && messageObject.email && messageObject.message) {
+    const mailformat = /.+@.+\..+/;
+    if (name === "" || email === "" || message === "") {
+      setAlert("Please enter all available fields.", "warning");
+    } else if (!email.match(mailformat)) {
+      setAlert("Please enter a valid email address.", "warning");
+    } else {
       API.sendMessage({
         name: messageObject.name,
         email: messageObject.email,
@@ -84,18 +72,6 @@ const Contact = () => {
           }
         })
         .catch((err) => console.log(err));
-    } else if (
-      !messageObject.name ||
-      !messageObject.email ||
-      !messageObject.message
-    ) {
-      openAlertModal();
-      setMessageObject({
-        ...messageObject,
-        name: "",
-        email: "",
-        message: "",
-      });
     }
   };
 
@@ -106,7 +82,7 @@ const Contact = () => {
       </NavigationContainer>
       <FormContainer className="container" id="contactMe">
         <div className="row">
-          <div className="col-lg-7">
+          <div className="col">
             <h2 className="border-bottom pb-3 pt-3">Contact</h2>
             <form id="contactBox">
               <div className="form-row">
@@ -114,19 +90,19 @@ const Contact = () => {
                   onChange={handleInputChange}
                   name="name"
                   placeholder="Jane Smith"
-                  value={messageObject.name}
+                  value={name}
                 />
                 <Input
                   onChange={handleInputChange}
                   name="email"
                   placeholder="jsmith@example.com"
-                  value={messageObject.email}
+                  value={email}
                 />
                 <TextArea
                   onChange={handleInputChange}
                   name="message"
                   placeholder="Enter your message here!"
-                  value={messageObject.message}
+                  value={message}
                 />
                 <FormBtn onClick={handleFormSubmit}>Submit</FormBtn>
               </div>
@@ -165,37 +141,6 @@ const Contact = () => {
                 </div>
               </div>
             </MessageModal>
-            <AlertModal show={alertModal}>
-              <div
-                className="modal alert container"
-                role="dialog"
-                id="alertModal"
-                style={displayAlertOptions}
-              >
-                <div className="modal-header">
-                  <h3>All fields are required!</h3>
-                  <button
-                    type="button"
-                    class="close"
-                    data-dismiss="alert"
-                    aria-label="Close"
-                    onClick={handleAlertClose}
-                  >
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-footer">
-                  <button
-                    type="button"
-                    class="btn btn-warning"
-                    data-dismiss="modal"
-                    onClick={handleAlertClose}
-                  >
-                    Close
-                  </button>
-                </div>
-              </div>
-            </AlertModal>
           </div>
         </div>
       </FormContainer>
