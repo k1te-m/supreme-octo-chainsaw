@@ -32,20 +32,32 @@
       }
   }
 
-.contact-info {
+.contact-info ul li {
   display: flex;
-  align-items: center;
   justify-content: center;
+  width: 250px;
 }
 .contact-info span {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 10px;
 }
 .icon {
   vertical-align: middle;
   font-size: 2rem;
   margin: 5px 10px;
+}
+
+.contact-info {
+  margin: 0px;
+  padding: 0px;
+}
+
+.modal {
+  background: #fffbbd;
+  border: 3px solid orange;
+  border-radius: 5px;
 }
 
 
