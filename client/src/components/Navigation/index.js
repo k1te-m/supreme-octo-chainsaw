@@ -88,6 +88,7 @@ const fadeIn = keyframes`
 const NavNav = styled.nav`
   width: 100vw;
   animation: ${fadeIn} 2s ease-in-out;
+  height: auto;
 `;
 
 export default Navigation;
