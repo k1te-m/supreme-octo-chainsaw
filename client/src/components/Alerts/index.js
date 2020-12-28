@@ -9,7 +9,7 @@ const Alerts = () => {
     alertContext.alerts.length > 0 &&
     alertContext.alerts.map((alert) => (
       <StyledAlert key={alert.id} className={`alert alert-${alert.type}`}>
-        <i className="fas fa-info-circle" /> {alert.message}
+        <i class="fas fa-exclamation-circle"/> {alert.message}
       </StyledAlert>
     ))
   );
@@ -17,6 +17,7 @@ const Alerts = () => {
 
 const StyledAlert = styled.div`
     position: fixed;
+    z-index: 9999;
 `
 
 export default Alerts;
