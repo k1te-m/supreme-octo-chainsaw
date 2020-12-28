@@ -32,10 +32,11 @@ const Contact = () => {
     display: "none",
     zIndex: "2",
     position: "fixed",
-    top: "20%",
-    left: "20%",
-    maxWidth: "50%",
-    height: "250px",
+    left: "50%",
+    top: "50%",
+    transform: "translate(-50%, -50%)",
+    height: "auto",
+    width: "auto",
   });
 
   const [infoModal, setInfoModal] = useState({
@@ -45,10 +46,11 @@ const Contact = () => {
     display: "none",
     zIndex: "2",
     position: "fixed",
-    top: "20%",
-    left: "20%",
-    maxWidth: "50%",
-    height: "250px",
+    left: "50%",
+    top: "50%",
+    transform: "translate(-50%, -50%)",
+    height: "auto",
+    width: "auto",
   });
 
   const handleInputChange = (event) => {
@@ -72,7 +74,7 @@ const Contact = () => {
   }
 
   const openInfoModal = () => {
-    setInfoDisplayOptions(true);
+    setInfoModal(true);
     setInfoDisplayOptions({...infoDisplayOptions, display: "block"})
   }
 
@@ -80,9 +82,9 @@ const Contact = () => {
     event.preventDefault();
     const mailformat = /.+@.+\..+/;
     if (name === "" || email === "" || message === "") {
-      setAlert("Please enter all available fields.", "warning");
+      setAlert("Please enter all available fields.", "danger");
     } else if (!email.match(mailformat)) {
-      setAlert("Please enter a valid email address.", "warning");
+      setAlert("Please enter a valid email address.", "danger");
     } else {
       API.sendMessage({
         name: messageObject.name,
@@ -138,7 +140,7 @@ const Contact = () => {
             </form>
           </div>
         </div>
-        <CardLayout className="row m-4">
+        <CardLayout className="row m-4 mt-3">
           <GitHubCard />
           <LinkedInCard />
           <ContactButton type="button" onClick={openInfoModal}>
@@ -199,7 +201,7 @@ const Contact = () => {
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <div className="modal-body">
+            <div className="modal-body contact">
               <ul className="contact-info">
                 <li className="info"><i className="far fa-envelope icon"/><span>kmiller343@gmail.com</span></li>
                 <li className="info"><i className="fas fa-phone-volume icon"/><span>(847) 987-9744</span></li>
