@@ -32,3 +32,24 @@
       }
   }
 
+.contact-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-info span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon {
+  vertical-align: middle;
+  font-size: 2rem;
+  margin: 5px 10px;
+}
+
+
+  
+
+
+
