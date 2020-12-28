@@ -29,4 +29,14 @@ export function FormBtn(props) {
 
   const ContactTextArea = styled.textarea`
     height: 200px;
+    @media screen and (min-width: 576px) {
+      height: 350px;
+    }
+    @media screen and (min-width: 768px) {
+    }
+    @media screen and (min-width: 992px) {
+    }
+    @media screen and (min-width: 1200px) {
+      
+    }
   `
