@@ -5,6 +5,12 @@ import MessageModal from "../components/MessageModal";
 import Navigation from "../components/Navigation";
 import styled from "styled-components";
 import AlertContext from "../context/Alert/alertContext";
+import GitHubCard from "../components/GitHubCard";
+import LinkedInCard from "../components/LinkedInCard";
+import ContactInfoCard from "../components/ContactInfoCard";
+import ContactInfoModal from "../components/ContactInfoModal";
+import { Link } from "react-router-dom";
+import "./style.css";
 
 const Contact = () => {
   const alertContext = useContext(AlertContext);
@@ -32,6 +38,19 @@ const Contact = () => {
     height: "250px",
   });
 
+  const [infoModal, setInfoModal] = useState({
+    show: false,
+  })
+  const [infoDisplayOptions, setInfoDisplayOptions] = useState({
+    display: "none",
+    zIndex: "2",
+    position: "fixed",
+    top: "20%",
+    left: "20%",
+    maxWidth: "50%",
+    height: "250px",
+  });
+
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setMessageObject({ ...messageObject, [name]: value });
@@ -46,6 +65,16 @@ const Contact = () => {
     setMessageModal(true);
     setDisplayOptions({ ...displayOptions, display: "block" });
   };
+
+  const handleInfoClose = () => {
+    setInfoDisplayOptions(false);
+    setInfoDisplayOptions({...infoDisplayOptions, display: "none"});
+  }
+
+  const openInfoModal = () => {
+    setInfoDisplayOptions(true);
+    setInfoDisplayOptions({...infoDisplayOptions, display: "block"})
+  }
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
@@ -107,42 +136,77 @@ const Contact = () => {
                 <FormBtn onClick={handleFormSubmit}>Submit</FormBtn>
               </div>
             </form>
-            <MessageModal show={messageModal}>
-              <div
-                className="modal container"
-                role="dialog"
-                id="messageModal"
-                style={displayOptions}
-              >
-                <div className="modal-header">
-                  <h3>Thank you!</h3>
-                  <button
-                    type="button"
-                    class="close"
-                    data-dismiss="modal"
-                    aria-label="Close"
-                    onClick={handleMessageClose}
-                  >
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <h5>Your message has been received. 😀</h5>
-                </div>
-                <div class="modal-footer">
-                  <button
-                    type="button"
-                    class="btn btn-warning"
-                    data-dismiss="modal"
-                    onClick={handleMessageClose}
-                  >
-                    Close
-                  </button>
-                </div>
-              </div>
-            </MessageModal>
           </div>
         </div>
+        <CardLayout className="row m-4">
+          <GitHubCard />
+          <LinkedInCard />
+          <ContactButton type="button" onClick={openInfoModal}>
+            <ContactInfoCard />
+          </ContactButton>
+        </CardLayout>
+
+        <MessageModal show={messageModal}>
+          <div
+            className="modal container"
+            role="dialog"
+            id="messageModal"
+            style={displayOptions}
+          >
+            <div className="modal-header">
+              <h3>Thank you!</h3>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+                onClick={handleMessageClose}
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h5>Your message has been received. 😀</h5>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-warning"
+                data-dismiss="modal"
+                onClick={handleMessageClose}
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </MessageModal>
+        <ContactInfoModal>
+          <div 
+          className="modal container" 
+          role="dialog" 
+          id="contactInfo"
+          style={infoDisplayOptions}
+          >
+            <div className="modal-header">
+              <h3 className="modal-title">Contact Info:</h3>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+                onClick={handleInfoClose}
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div className="modal-body">
+              <ul className="contact-info">
+                <li className="info"><i className="far fa-envelope icon"/><span>kmiller343@gmail.com</span></li>
+                <li className="info"><i className="fas fa-phone-volume icon"/><span>(847) 987-9744</span></li>
+              </ul>
+            </div>
+          </div>
+        </ContactInfoModal>
       </FormContainer>
     </>
   );
@@ -152,10 +216,15 @@ const NavigationContainer = styled.div`
   position: fixed;
   top: 0%;
   right: 0%;
+  z-index: 9999;
 `;
 
 const FormContainer = styled.div`
-  margin-top: -8.3rem;
+  position: fixed;
+  top: 2%;
+
+  @media screen and (min-width: 411px) {
+  }
   @media screen and (min-width: 576px) {
   }
   @media screen and (min-width: 768px) {
@@ -165,5 +234,20 @@ const FormContainer = styled.div`
   @media screen and (min-width: 1200px) {
   }
 `;
+
+const CardLayout = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+const ContactButton = styled.button`
+height: auto;
+width: auto;
+background: transparent;
+border: none;
+padding: 0;
+margin: 0;
+`
+
 
 export default Contact;
