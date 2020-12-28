@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import "./style.css";
 
 export function Input(props) {
     return (
@@ -21,7 +22,7 @@ export function TextArea(props) {
   
 export function FormBtn(props) {
     return (
-      <button {...props}  className="btn-lg btn-warning mt-1 mb-3" id="subBotton">
+      <button {...props}  className="btn-lg btn-warning mt-3 mb-3" id="subBotton">
         {props.children}
       </button>
     );
