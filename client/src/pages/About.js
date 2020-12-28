@@ -12,7 +12,7 @@ const About = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    const myFace = setTimeout(() => {
+    setTimeout(() => {
       setLoadWheel(false);
     }, 2000);
   }, []);

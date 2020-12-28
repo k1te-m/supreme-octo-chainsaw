@@ -1,6 +1,5 @@
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Landing from "./pages/Landing";
 import GlobalStyle from "./components/GlobalStyle";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";

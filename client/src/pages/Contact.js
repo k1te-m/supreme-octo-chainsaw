@@ -3,13 +3,12 @@ import API from "../utils/API";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import MessageModal from "../components/MessageModal";
 import Navigation from "../components/Navigation";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import AlertContext from "../context/Alert/alertContext";
 import GitHubCard from "../components/GitHubCard";
 import LinkedInCard from "../components/LinkedInCard";
 import ContactInfoCard from "../components/ContactInfoCard";
 import ContactInfoModal from "../components/ContactInfoModal";
-import { Link } from "react-router-dom";
 import "./style.css";
 
 const Contact = () => {
@@ -182,7 +181,7 @@ const Contact = () => {
             </div>
           </div>
         </MessageModal>
-        <ContactInfoModal>
+        <ContactInfoModal show={infoModal}>
           <div 
           className="modal container" 
           role="dialog" 
@@ -236,6 +235,7 @@ const FormContainer = styled.div`
   @media screen and (min-width: 1200px) {
   }
 `;
+
 
 const CardLayout = styled.div`
   display: flex;

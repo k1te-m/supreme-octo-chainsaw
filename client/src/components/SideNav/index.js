@@ -6,19 +6,20 @@ const SideNav = () => {
     <SideNavStyle>
       <ul className="list-group">
         <li className="list-group-item">
-          <a href="https://github.com/k1te-m" target="_blank">
-            <img src="../../images/GitHub-Mark-32px.png" />
+          <a href="https://github.com/k1te-m" target="_blank" rel="noreferrer">
+            <img src="../../images/GitHub-Mark-32px.png" alt="GitHub"/>
           </a>
         </li>
         <li className="list-group-item">
-          <a href="https://www.linkedin.com/in/kmiller29/" target="_blank">
-            <img src="../../images/LI-In-Bug.png" />
+          <a href="https://www.linkedin.com/in/kmiller29/" target="_blank" rel="noreferrer">
+            <img src="../../images/LI-In-Bug.png" alt="LinkedIn"/>
           </a>
         </li>
         <li className="list-group-item">
           <a
             href="https://drive.google.com/file/d/1XbOSu9JYqNGkLfgajWcSbFbJs2Bp1cXr/view?usp=sharing"
             target="_blank"
+            rel="noreferrer"
           >
             <i class="fas fa-file" />
           </a>

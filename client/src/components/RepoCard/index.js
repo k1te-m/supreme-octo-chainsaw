@@ -12,7 +12,7 @@ const RepoCard = ({ value }) => {
           href={`https://www.github.com/${value.github}/${value.name}`}
           className="btn btn-warning"
           target="_blank"
-          rel="nonreferrer"
+          rel="noreferrer"
         >
           GitHub Repository
         </a>

@@ -47,6 +47,7 @@ const Navigation = () => {
                 className="nav-link"
                 href="https://github.com/k1te-m"
                 target="_blank"
+                rel="noreferrer"
               >
                 GitHub
               </a>
@@ -56,6 +57,7 @@ const Navigation = () => {
                 className="nav-link"
                 href="https://www.linkedin.com/in/kmiller29/"
                 target="_blank"
+                rel="noreferrer"
               >
                 LinkedIn
               </a>
@@ -65,6 +67,7 @@ const Navigation = () => {
                 className="nav-link"
                 href="https://drive.google.com/file/d/1XbOSu9JYqNGkLfgajWcSbFbJs2Bp1cXr/view?usp=sharing"
                 target="_blank"
+                rel="noreferrer"
               >
                 Resume
               </a>

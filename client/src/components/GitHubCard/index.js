@@ -4,8 +4,8 @@ import styled, { keyframes } from "styled-components";
 const GitHubCard = () => {
   return (
     <Card className="card">
-      <a href="https://github.com/k1te-m" target="_blank">
-        <img src="../images/GitHub-Mark-32px.png" />
+      <a href="https://github.com/k1te-m" target="_blank" rel="noreferrer">
+        <img src="../images/GitHub-Mark-32px.png" alt="GitHub"/>
       </a>
     </Card>
   );

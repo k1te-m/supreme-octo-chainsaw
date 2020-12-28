@@ -4,8 +4,8 @@ import styled, { keyframes } from "styled-components";
 const LinkedInCard = () => {
   return (
     <Card className="card">
-      <a href="https://www.linkedin.com/in/kmiller29/" target="_blank">
-        <img src="../images/LI-In-Bug.png" />
+      <a href="https://www.linkedin.com/in/kmiller29/" target="_blank" rel="noreferrer">
+        <img src="../images/LI-In-Bug.png" alt="LinkedIn"/>
       </a>
     </Card>
   );
