@@ -1,7 +1,7 @@
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
-const ContactInfoModal = ({ show, children }) => {
+const Modal = ({ show, children }) => {
   if (show === false) {
     return null;
   } else {
@@ -21,4 +21,4 @@ const ContactInfoModal = ({ show, children }) => {
   }
 };
 
-export default ContactInfoModal;
+export default Modal;
