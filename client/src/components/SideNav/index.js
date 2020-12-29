@@ -7,12 +7,12 @@ const SideNav = () => {
       <ul className="list-group">
         <li className="list-group-item">
           <a href="https://github.com/k1te-m" target="_blank" rel="noreferrer">
-            <img src="../../images/GitHub-Mark-32px.png" alt="GitHub"/>
+            <i class="fab fa-github"></i>
           </a>
         </li>
         <li className="list-group-item">
           <a href="https://www.linkedin.com/in/kmiller29/" target="_blank" rel="noreferrer">
-            <img src="../../images/LI-In-Bug.png" alt="LinkedIn"/>
+            <i class="fab fa-linkedin"></i>
           </a>
         </li>
         <li className="list-group-item">
@@ -78,8 +78,24 @@ const SideNavStyle = styled.div`
     animation: ${pulse} 1s infinite;
   }
   i {
-    color: black;
-    font-size: 2rem;
+    color: salmon;
+    font-size: 1.5rem;
+    padding: 0px;
+    margin: 0px;
+    @media (min-width: 576px) {
+      font-size: 2rem;
+    }
+    @media (min-width: 768px) {
+      font-size: 2.5rem;
+    }
+    @media (min-width: 992px) {
+      font-size: 3rem;
+    }
+    @media (min-width: 1200px) {
+    }
+  }
+  li {
+    padding: 5px 10px;
   }
 `;
 
