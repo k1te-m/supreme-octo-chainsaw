@@ -34,6 +34,7 @@ const About = () => {
       <SlideInUpDiv>
         <AboutContainer className="container">
           <AboutHeader>My name is Kevin Miller.</AboutHeader>
+          <p>Pellentesque mollis erat lectus, a tempus ipsum consectetur quis. Quisque mollis lorem in felis semper, in pulvinar lacus gravida. Phasellus quis nibh pharetra ex tristique suscipit id a ex. Cras vitae augue eget velit bibendum rutrum vitae sed ex. Duis ex sem, consectetur et nunc ut, consequat pharetra dui. In placerat arcu vitae luctus mattis. Suspendisse nec nisi quis urna viverra feugiat at sed dui. Aliquam venenatis congue accumsan. Etiam ut nunc tincidunt, efficitur ante sed, sollicitudin nibh.</p>
         </AboutContainer>
       </SlideInUpDiv>
       <SlideInRightDiv>
@@ -64,7 +65,8 @@ const AboutHeader = styled.h1`
   }
 `;
 
-const AboutContainer = styled.div``;
+const AboutContainer = styled.div`
+text-align: center;`;
 
 const slideInUP = keyframes`
 from {
