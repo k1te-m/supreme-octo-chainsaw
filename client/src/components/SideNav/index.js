@@ -50,6 +50,7 @@ const SideNavStyle = styled.div`
   position: fixed;
   top: -1rem;
   left: -1rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   animation: ${fadeIn} 2s ease-in-out;
   @media (min-width: 576px) {
     top: 1.5rem;
@@ -65,11 +66,11 @@ const SideNavStyle = styled.div`
 
   ul {
     list-style: none;
-    border: 1px solid orange;
+    border: 1px solid #e6aa68;
   }
   .list-group-item {
-    background-color: #fffbbd;
-    border: 1px solid orange;
+    background-color: #fff9a4;
+    border: 1px solid #e6aa68;
   }
   img:hover {
     animation: ${pulse} 1s infinite;
@@ -78,7 +79,7 @@ const SideNavStyle = styled.div`
     animation: ${pulse} 1s infinite;
   }
   i {
-    color: salmon;
+    color: #FF4162;
     font-size: 1.5rem;
     padding: 0px;
     margin: 0px;

@@ -24,7 +24,7 @@ const Card = styled.div`
   width: 55px;
   height: 55px;
   border: 2px solid #e6aa68;
-  background: #fffbbd;
+  background: #fff9a4;
   @media (min-width: 576px) {
       
   }
@@ -42,7 +42,7 @@ const Card = styled.div`
     animation: ${pulse} 1s infinite;
   }
   i {
-    color: salmon;
+    color:#ffd47f;
     font-size: 2rem;
     @media (min-width: 576px) {
       

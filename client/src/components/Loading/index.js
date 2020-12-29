@@ -20,7 +20,7 @@ const LoadingImage = styled.img.attrs({
   alt: "Kevin"
 })`
   border-radius: 50%;
-  border: 4px solid orange;
+  border: 4px solid #ffd47f;
 `;
 
 const rotate = keyframes`

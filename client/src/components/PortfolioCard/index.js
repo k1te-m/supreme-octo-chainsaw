@@ -18,7 +18,7 @@ const PortfolioCard = () => {
       <Link to="/portfolio" style={centered}>
         <PortfolioImg
           className="card-img-top"
-          src="../images/cloud.png"
+          src="../images/code.png"
           alt="Code Cloud"
         />
       </Link>
@@ -51,8 +51,10 @@ const Card = styled.div`
   justify-content: center;
   height: 120px;
   width: 120px;
-  border: 2px solid #e6aa68;
-  background: #fffbbd;
+  border: 2px solid #FF4162;
+  border-radius: 50%;
+  background: #fff9a4;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   img:hover {
     animation: ${pulse} 1s infinite;
   }
@@ -69,14 +71,16 @@ const Card = styled.div`
     width: 250px;
   }
   @media (min-width: 1200px) {
-    width: 200px;
-    height: 200px;
+    width: 215px;
+    height: 210px;
   } ;
 `;
 
 const CardTitle = styled.h1`
   font-size: 20px;
-  color: salmon;
+  color: #e6aa68;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
   @media (min-width: 576px) {
   }
   @media (min-width: 768px) {
@@ -90,7 +94,7 @@ const CardTitle = styled.h1`
 `;
 
 // const ListItem = styled.li`
-//   background: #fffbbd;
+//   background: #fff9a4;
 // `;
 
 // Image Provided by flaticon.com
@@ -99,6 +103,7 @@ const PortfolioImg = styled.img`
   width: 70px;
   margin: 0 auto;
   margin-top: 1rem;
+  padding: 5px;
   @media (min-width: 576px) {
     height: 100px;
     width: 100px;

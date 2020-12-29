@@ -229,7 +229,7 @@ const NavigationContainer = styled.div`
 
 const WhiteHeading = styled.h2`
   color: white;
-  border-bottom: 0.5px solid salmon;
+  border-bottom: 0.5px solid#ffd47f;
 `;
 
 const fadeIn = keyframes`

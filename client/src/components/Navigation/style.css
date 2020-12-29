@@ -25,9 +25,9 @@
 }
 li {
   display: flex;
-  border: 1px solid orange;
+  border: 1px solid #ffd47f;
   size: 15px;
-  background-color: #fffbbd;
+  background-color: #fff9a4;
   justify-content: center;
   width: 100%;
 }
@@ -59,9 +59,9 @@ li {
 }
 li {
     display: flex;
-    border: 1px solid orange;
+    border: 1px solid #ffd47f;
     size: 15px;
-    background-color: #fffbbd;
+    background-color: #fff9a4;
     justify-content: center;
     width: 100%;
   }

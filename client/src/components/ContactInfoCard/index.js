@@ -22,7 +22,7 @@ const Card = styled.div`
   width: 55px;
   height: 55px;
   border: 2px solid #e6aa68;
-  background: #fffbbd;
+  background: #fff9a4;
   @media (min-width: 576px) {
   }
   @media (min-width: 768px) {
@@ -35,7 +35,7 @@ const Card = styled.div`
   }
   i {
     font-size: 2rem;
-    color: salmon;
+    color:#ffd47f;
     @media (min-width: 576px) {
       
     }
