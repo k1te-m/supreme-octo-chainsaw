@@ -78,6 +78,8 @@ const Card = styled.div`
     width: 300px;
   }
   @media (min-width: 1200px) {
+    width: 200px;
+    height: 200px;  
   } ;
 `;
 
@@ -98,6 +100,8 @@ const ContactImg = styled.img`
     width: 225px;
   }
   @media (min-width: 1200px) {
+    height: 125px;
+    width: 125px;
   } ;
 `;
 
