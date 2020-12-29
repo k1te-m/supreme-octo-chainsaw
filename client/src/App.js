@@ -33,7 +33,7 @@ function App() {
             </Route>
           </Switch>
         </Router>
-        <ParticlesBg color="#ffa500" type="cobweb" num={35} bg={true} />
+        <ParticlesBg color="#3b845e" type="cobweb" num={35} bg={true} />
       </AlertState>
     </div>
   );
