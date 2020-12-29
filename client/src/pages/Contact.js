@@ -113,7 +113,7 @@ const Contact = () => {
       <FormContainer className="container" id="contactMe">
         <div className="row">
           <div className="col">
-            <h2 className="border-bottom pb-3 pt-3">Contact</h2>
+            <WhiteHeading className="pb-3 pt-3">Contact</WhiteHeading>
             <form id="contactBox">
               <div className="form-row">
                 <Input
@@ -139,7 +139,7 @@ const Contact = () => {
             </form>
           </div>
         </div>
-        <CardLayout className="row m-4 mt-3">
+        <CardLayout className="row row-cols-3 m-4 mt-3">
           <GitHubCard />
           <LinkedInCard />
           <ContactButton type="button" onClick={openInfoModal}>
@@ -189,16 +189,16 @@ const Contact = () => {
           style={infoDisplayOptions}
           >
             <div className="modal-header">
-              <h3 className="modal-title">Contact Info:</h3>
-              <button
+              <h3 className="modal-title">Contact Info</h3>
+              <ContactButton
                 type="button"
                 class="close"
                 data-dismiss="modal"
                 aria-label="Close"
                 onClick={handleInfoClose}
               >
-                <span aria-hidden="true">&times;</span>
-              </button>
+                <span aria-hidden="true"><i class="fas fa-window-close" /></span>
+              </ContactButton>
             </div>
             <div className="modal-body contact">
               <ul className="contact-info">
@@ -220,10 +220,24 @@ const NavigationContainer = styled.div`
   z-index: 9999;
 `;
 
+const WhiteHeading = styled.h2`
+  color: white;
+  border-bottom: .5px solid salmon;
+`
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
 const FormContainer = styled.div`
   position: fixed;
   top: 2%;
-
+  animation: ${fadeIn} 1.5s linear;
   @media screen and (min-width: 411px) {
   }
   @media screen and (min-width: 576px) {
@@ -238,8 +252,7 @@ const FormContainer = styled.div`
 
 
 const CardLayout = styled.div`
-  display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 `;
 
 const ContactButton = styled.button`
