@@ -55,9 +55,18 @@
 }
 
 .modal {
-  background: #fffbbd;
+  background: salmon;
   border: 3px solid orange;
   border-radius: 5px;
+}
+
+.info {
+  background-color: salmon;
+  border: 3px solid white;
+}
+
+.modal-header {
+  border-bottom: 1px solid #45b08c;
 }
 
 
