@@ -51,9 +51,9 @@ const Card = styled.div`
   justify-content: center;
   height: 120px;
   width: 120px;
-  border: 2px solid #FF4162;
+  border: 2px solid #3B945E;
   border-radius: 50%;
-  background: #fff9a4;
+  background: #182628;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   img:hover {
     animation: ${pulse} 1s infinite;
@@ -78,9 +78,7 @@ const Card = styled.div`
 
 const CardTitle = styled.h1`
   font-size: 20px;
-  color: #e6aa68;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
+  color: #F2F2F2;
   @media (min-width: 576px) {
   }
   @media (min-width: 768px) {

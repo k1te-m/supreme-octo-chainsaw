@@ -5,7 +5,7 @@ import "./style.css";
 
 const hamburgerStyle = {
   fontSize: "3rem",
-  color: "#E6AA68",
+  color: "#F2F2F2",
   border: "none",
   marginRight: "10px",
 };

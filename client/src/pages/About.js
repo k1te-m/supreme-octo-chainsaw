@@ -34,7 +34,7 @@ const About = () => {
       <SlideInUpDiv>
         <AboutContainer className="container">
           <AboutHeader>My name is Kevin Miller.</AboutHeader>
-          <p>Pellentesque mollis erat lectus, a tempus ipsum consectetur quis. Quisque mollis lorem in felis semper, in pulvinar lacus gravida. Phasellus quis nibh pharetra ex tristique suscipit id a ex. Cras vitae augue eget velit bibendum rutrum vitae sed ex. Duis ex sem, consectetur et nunc ut, consequat pharetra dui. In placerat arcu vitae luctus mattis. Suspendisse nec nisi quis urna viverra feugiat at sed dui. Aliquam venenatis congue accumsan. Etiam ut nunc tincidunt, efficitur ante sed, sollicitudin nibh.</p>
+          <AboutDescription>Pellentesque mollis erat lectus, a tempus ipsum consectetur quis. Quisque mollis lorem in felis semper, in pulvinar lacus gravida. Phasellus quis nibh pharetra ex tristique suscipit id a ex. Cras vitae augue eget velit bibendum rutrum vitae sed ex. Duis ex sem, consectetur et nunc ut, consequat pharetra dui. In placerat arcu vitae luctus mattis. Suspendisse nec nisi quis urna viverra feugiat at sed dui. Aliquam venenatis congue accumsan. Etiam ut nunc tincidunt, efficitur ante sed, sollicitudin nibh.</AboutDescription>
         </AboutContainer>
       </SlideInUpDiv>
       <SlideInRightDiv>
@@ -49,7 +49,7 @@ const About = () => {
 
 const AboutHeader = styled.h1`
   font-size: 25px;
-  color: #e6aa68;
+  color: #F2F2F2;
   text-align: center;
   @media screen and (min-width: 576px) {
     font-size: 35px;
@@ -64,6 +64,10 @@ const AboutHeader = styled.h1`
     font-size: 65px;
   }
 `;
+
+const AboutDescription = styled.p`
+  color: #F2F2F2;
+`
 
 const AboutContainer = styled.div`
 text-align: center;`;
