@@ -65,6 +65,9 @@ const SideNavStyle = styled.div`
   }
 
   ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     list-style: none;
     border: 1px solid #e6aa68;
   }
@@ -97,6 +100,9 @@ const SideNavStyle = styled.div`
   }
   li {
     padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `;
 
