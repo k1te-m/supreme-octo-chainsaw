@@ -108,7 +108,7 @@ const SlideInRightDiv = styled.div`
   }
   @media screen and (min-width: 992px) {
     position: fixed;
-    right: 10%;
+    right: 7%;
     bottom: 5%;
   }
   @media screen and (min-width: 1200px) {
@@ -144,7 +144,7 @@ const SlideInLeftDiv = styled.div`
   }
   @media screen and (min-width: 992px) {
     position: fixed;
-    left: 10%;
+    left: 7%;
     bottom: 5%;
   }
   @media screen and (min-width: 1200px) {

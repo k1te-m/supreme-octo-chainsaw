@@ -7,6 +7,11 @@ const ContactCard = () => {
     margin: "0 auto",
     textAlign: "center",
   };
+  const flexCenter = {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center"
+  }
   return (
     <Card className="card">
       <Link to="/contact" style={centered}>
@@ -16,7 +21,7 @@ const ContactCard = () => {
           alt="Card image cap"
         />
       </Link>
-      <div className="card-body">
+      <div className="card-body" style={flexCenter}>
         <CardTitle className="card-title" style={centered}>
           Contact
         </CardTitle>
@@ -58,6 +63,9 @@ const shake = keyframes`
 `;
 
 const Card = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 140px;
   height: 140px;
   border: 2px solid #e6aa68;
@@ -66,12 +74,12 @@ const Card = styled.div`
     animation ${shake} 0.5s infinite;
   }
   @media (min-width: 576px) {
-    height: 200px;
-    width: 200px;
+    height: 175px;
+    width: 175px;
   }
   @media (min-width: 768px) {
-    height: 250px;
-    width: 250px;
+    height: 225px;
+    width: 225px;
   }
   @media (min-width: 992px) {
     height: 300px;
@@ -87,17 +95,18 @@ const ContactImg = styled.img`
   height: 70px;
   width: 70px;
   margin: 0 auto;
+  margin-top: 1rem;
   @media (min-width: 576px) {
-    height: 125px;
-    width: 125px;
+    height: 100px;
+    width: 100px;
   }
   @media (min-width: 768px) {
-    height: 175px;
-    width: 175px;
+    height: 130px;
+    width: 130px;
   }
   @media (min-width: 992px) {
-    height: 225px;
-    width: 225px;
+    height: 160px;
+    width: 160px;
   }
   @media (min-width: 1200px) {
     height: 125px;
