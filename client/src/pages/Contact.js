@@ -1,14 +1,13 @@
 import React, { useContext, useState } from "react";
 import API from "../utils/API";
 import { Input, TextArea, FormBtn } from "../components/Form";
-import MessageModal from "../components/MessageModal";
 import Navigation from "../components/Navigation";
 import styled, { keyframes } from "styled-components";
 import AlertContext from "../context/Alert/alertContext";
 import GitHubCard from "../components/GitHubCard";
 import LinkedInCard from "../components/LinkedInCard";
 import ContactInfoCard from "../components/ContactInfoCard";
-import ContactInfoModal from "../components/ContactInfoModal";
+import Modal from "../components/Modal";
 import "./style.css";
 
 const Contact = () => {
@@ -40,7 +39,7 @@ const Contact = () => {
 
   const [infoModal, setInfoModal] = useState({
     show: false,
-  })
+  });
   const [infoDisplayOptions, setInfoDisplayOptions] = useState({
     display: "none",
     zIndex: "2",
@@ -69,13 +68,13 @@ const Contact = () => {
 
   const handleInfoClose = () => {
     setInfoDisplayOptions(false);
-    setInfoDisplayOptions({...infoDisplayOptions, display: "none"});
-  }
+    setInfoDisplayOptions({ ...infoDisplayOptions, display: "none" });
+  };
 
   const openInfoModal = () => {
     setInfoModal(true);
-    setInfoDisplayOptions({...infoDisplayOptions, display: "block"})
-  }
+    setInfoDisplayOptions({ ...infoDisplayOptions, display: "block" });
+  };
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
@@ -147,7 +146,7 @@ const Contact = () => {
           </ContactButton>
         </CardLayout>
 
-        <MessageModal show={messageModal}>
+        <Modal show={messageModal}>
           <div
             className="modal container"
             role="dialog"
@@ -180,13 +179,13 @@ const Contact = () => {
               </button>
             </div>
           </div>
-        </MessageModal>
-        <ContactInfoModal show={infoModal}>
-          <div 
-          className="modal container" 
-          role="dialog" 
-          id="contactInfo"
-          style={infoDisplayOptions}
+        </Modal>
+        <Modal show={infoModal}>
+          <div
+            className="modal container"
+            role="dialog"
+            id="contactInfo"
+            style={infoDisplayOptions}
           >
             <div className="modal-header">
               <h3 className="modal-title">Contact Info</h3>
@@ -197,17 +196,25 @@ const Contact = () => {
                 aria-label="Close"
                 onClick={handleInfoClose}
               >
-                <span aria-hidden="true"><i class="fas fa-window-close" /></span>
+                <span aria-hidden="true">
+                  <i class="fas fa-window-close" />
+                </span>
               </ContactButton>
             </div>
             <div className="modal-body contact">
               <ul className="contact-info">
-                <li className="info"><i className="far fa-envelope icon"/><span>kmiller343@gmail.com</span></li>
-                <li className="info"><i className="fas fa-phone-volume icon"/><span>(847) 987-9744</span></li>
+                <li className="info">
+                  <i className="far fa-envelope icon" />
+                  <span>kmiller343@gmail.com</span>
+                </li>
+                <li className="info">
+                  <i className="fas fa-phone-volume icon" />
+                  <span>(847) 987-9744</span>
+                </li>
               </ul>
             </div>
           </div>
-        </ContactInfoModal>
+        </Modal>
       </FormContainer>
     </>
   );
@@ -222,14 +229,16 @@ const NavigationContainer = styled.div`
 
 const WhiteHeading = styled.h2`
   color: white;
-  border-bottom: .5px solid salmon;
-`
+  border-bottom: 0.5px solid salmon;
+`;
 
 const fadeIn = keyframes`
   from {
+    transform: scale(0);
     opacity: 0;
   }
   to {
+    transform: scale(1);
     opacity: 1;
   }
 `;
@@ -250,19 +259,17 @@ const FormContainer = styled.div`
   }
 `;
 
-
 const CardLayout = styled.div`
   justify-content: space-around;
 `;
 
 const ContactButton = styled.button`
-height: auto;
-width: auto;
-background: transparent;
-border: none;
-padding: 0;
-margin: 0;
-`
-
+  height: auto;
+  width: auto;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+`;
 
 export default Contact;
