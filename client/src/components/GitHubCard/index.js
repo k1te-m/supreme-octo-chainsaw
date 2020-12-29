@@ -5,7 +5,7 @@ const GitHubCard = () => {
   return (
     <Card className="card">
       <a href="https://github.com/k1te-m" target="_blank" rel="noreferrer">
-        <img src="../images/GitHub-Mark-32px.png" alt="GitHub"/>
+        <i class="fab fa-github" />
       </a>
     </Card>
   );
@@ -25,12 +25,37 @@ const Card = styled.div`
   height: 55px;
   border: 2px solid #e6aa68;
   background: #fffbbd;
-  img {
-    width: 32px;
-    height: 32px;
+  @media (min-width: 576px) {
+      
   }
-  img:hover {
+  @media (min-width: 768px) {
+    
+  }
+  @media (min-width: 992px) {
+    
+  }
+  @media (min-width: 1200px) {
+    width: 75px;
+    height: 75px;
+  } ;
+  i:hover {
     animation: ${pulse} 1s infinite;
+  }
+  i {
+    color: salmon;
+    font-size: 2rem;
+    @media (min-width: 576px) {
+      
+    }
+    @media (min-width: 768px) {
+      
+    }
+    @media (min-width: 992px) {
+      
+    }
+    @media (min-width: 1200px) {
+      font-size: 4rem;
+    } ;
   }
 `;
 

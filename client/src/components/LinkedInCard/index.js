@@ -5,7 +5,7 @@ const LinkedInCard = () => {
   return (
     <Card className="card">
       <a href="https://www.linkedin.com/in/kmiller29/" target="_blank" rel="noreferrer">
-        <img src="../images/LI-In-Bug.png" alt="LinkedIn"/>
+        <i class="fab fa-linkedin" />
       </a>
     </Card>
   );
@@ -25,12 +25,41 @@ const Card = styled.div`
   height: 55px;
   border: 2px solid #e6aa68;
   background: #fffbbd;
+  @media (min-width: 576px) {
+      
+  }
+  @media (min-width: 768px) {
+    
+  }
+  @media (min-width: 992px) {
+    
+  }
+  @media (min-width: 1200px) {
+    width: 75px;
+    height: 75px;
+  } ;
   img {
     width: auto;
     height: auto;
   }
-  img:hover {
+  i:hover {
     animation: ${pulse} 1s infinite;
+  }
+  i {
+    color: salmon;
+    font-size: 2rem;
+    @media (min-width: 576px) {
+      
+    }
+    @media (min-width: 768px) {
+      
+    }
+    @media (min-width: 992px) {
+      
+    }
+    @media (min-width: 1200px) {
+      font-size: 4rem;
+    } ;
   }
 `;
 

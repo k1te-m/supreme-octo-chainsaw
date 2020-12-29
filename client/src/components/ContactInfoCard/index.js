@@ -2,12 +2,12 @@ import React from "react";
 import styled, { keyframes } from "styled-components";
 
 const ContactInfoCard = () => {
-    return (
-        <Card className="card">
-            <i class="fas fa-info-circle" />
-        </Card>
-    )
-}
+  return (
+    <Card className="card">
+      <i class="fas fa-info-circle" />
+    </Card>
+  );
+};
 
 const pulse = keyframes`
     from { transfrom: scale(1); }
@@ -23,9 +23,31 @@ const Card = styled.div`
   height: 55px;
   border: 2px solid #e6aa68;
   background: #fffbbd;
+  @media (min-width: 576px) {
+  }
+  @media (min-width: 768px) {
+  }
+  @media (min-width: 992px) {
+  }
+  @media (min-width: 1200px) {
+    width: 75px;
+    height: 75px;
+  }
   i {
-      font-size: 2rem;
-      color: black;
+    font-size: 2rem;
+    color: salmon;
+    @media (min-width: 576px) {
+      
+    }
+    @media (min-width: 768px) {
+      
+    }
+    @media (min-width: 992px) {
+      
+    }
+    @media (min-width: 1200px) {
+      font-size: 4rem;
+    } ;
   }
   i:hover {
     animation: ${pulse} 1s infinite;
