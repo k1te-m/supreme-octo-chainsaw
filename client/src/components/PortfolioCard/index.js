@@ -22,7 +22,7 @@ const PortfolioCard = () => {
           alt="Code Cloud"
         />
       </Link>
-      <div className="card-body" style={flexCenter}>
+      <div className="card-body pt-1" style={flexCenter}>
         <CardTitle className="card-title" style={centered}>
           Portfolio
         </CardTitle>
@@ -49,8 +49,8 @@ const Card = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 140px;
-  width: 140px;
+  height: 120px;
+  width: 120px;
   border: 2px solid #e6aa68;
   background: #fffbbd;
   img:hover {
@@ -61,12 +61,12 @@ const Card = styled.div`
     width: 175px;
   }
   @media (min-width: 768px) {
-    height: 225px;
-    width: 225px;
+    height: 200px;
+    width: 200px;
   }
   @media (min-width: 992px) {
-    height: 300px;
-    width: 300px;
+    height: 250px;
+    width: 250px;
   }
   @media (min-width: 1200px) {
     width: 200px;
@@ -76,7 +76,7 @@ const Card = styled.div`
 
 const CardTitle = styled.h1`
   font-size: 20px;
-
+  color: salmon;
   @media (min-width: 576px) {
   }
   @media (min-width: 768px) {
