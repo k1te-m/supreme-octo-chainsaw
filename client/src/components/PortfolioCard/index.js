@@ -26,14 +26,6 @@ const PortfolioCard = () => {
         <CardTitle className="card-title" style={centered}>
           Portfolio
         </CardTitle>
-        {/* <p className="card-text">
-          GitHub repositories for projects and applications.
-        </p>
-        <div style={Centered}>
-          <a href="#" className="btn btn-warning">
-            View Portfolio
-          </a>
-        </div> */}
       </div>
     </Card>
   );
@@ -91,11 +83,8 @@ const CardTitle = styled.h1`
   } ;
 `;
 
-// const ListItem = styled.li`
-//   background: #fff9a4;
-// `;
 
-// Image Provided by flaticon.com
+// Image Provided by flaticon.com (https://www.flaticon.com/free-icon/code_2920244?related_item_id=2920277&term=code)
 const PortfolioImg = styled.img`
   height: 70px;
   width: 70px;
