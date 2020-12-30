@@ -270,6 +270,8 @@ const ContactButton = styled.button`
   border: none;
   padding: 0;
   margin: 0;
+  font-size: 2rem;
+  color: #65CCB8
 `;
 
 const ContactInfoList = styled.ul`

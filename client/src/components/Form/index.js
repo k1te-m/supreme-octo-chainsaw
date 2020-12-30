@@ -25,9 +25,9 @@ export function TextArea(props) {
 
 export function FormBtn(props) {
   return (
-    <button {...props} className="btn-lg btn-warning mt-3 mb-3" id="subBotton">
+    <FormButton {...props} className="btn-lg btn mt-3 mb-3" id="subBotton">
       {props.children}
-    </button>
+    </FormButton>
   );
 }
 
@@ -67,6 +67,18 @@ const FormInput = styled.input`
     background-color: #182628;
     outline: none !important;
     border:1px solid #3B945E;
+    box-shadow: 0 0 10px #57BA98;
+  }
+`
+const FormButton = styled.button`
+  color: #F2F2F2;
+  background-color: #182628;
+  border: 2px solid #3B945E;
+  :hover {
+    background-color: #3B945E;
+    border: 2px solid #182628;
+  }
+  :focus {
     box-shadow: 0 0 10px #57BA98;
   }
 `
