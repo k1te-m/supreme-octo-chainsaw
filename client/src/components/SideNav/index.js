@@ -50,7 +50,7 @@ const SideNavStyle = styled.div`
   position: fixed;
   top: -4.2rem;
   left: -1rem;
-  
+  z-index: 2;
   animation: ${fadeIn} 2s ease-in-out;
   @media (min-width: 576px) {
     top: -4.5rem;
