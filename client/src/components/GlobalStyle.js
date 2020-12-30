@@ -6,7 +6,7 @@ body{
     height: 100%;
     background-image: url("../images/skyline.jpg");
     background-repeat: no-repeat;
-    background-position: 36.5% 10%;
+    background-position: 36.8% 4%;
     @media (min-width: 576px) {
         background-position: 38% 10%;
     }
