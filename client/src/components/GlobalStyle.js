@@ -20,6 +20,6 @@ body{
         background-position: top;
     } ;
 }
-`
+`;
 
 export default GlobalStyle;

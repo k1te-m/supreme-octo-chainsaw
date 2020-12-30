@@ -48,18 +48,18 @@ const SideNavStyle = styled.div`
   margin-top: 5rem;
   margin-left: 1rem;
   position: fixed;
-  top: -1rem;
+  top: -4.2rem;
   left: -1rem;
   
   animation: ${fadeIn} 2s ease-in-out;
   @media (min-width: 576px) {
-    top: 1.5rem;
+    top: -4.5rem;
   }
   @media (min-width: 768px) {
-    top: 4.5rem;
+    top: -4.5rem;
   }
   @media (min-width: 992px) {
-    top: 7.5rem;
+    top: -4.5rem;
   }
   @media (min-width: 1200px) {
   }

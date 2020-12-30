@@ -26,14 +26,6 @@ const PortfolioCard = () => {
         <CardTitle className="card-title" style={centered}>
           Portfolio
         </CardTitle>
-        {/* <p className="card-text">
-          GitHub repositories for projects and applications.
-        </p>
-        <div style={Centered}>
-          <a href="#" className="btn btn-warning">
-            View Portfolio
-          </a>
-        </div> */}
       </div>
     </Card>
   );
@@ -77,25 +69,23 @@ const Card = styled.div`
 `;
 
 const CardTitle = styled.h1`
-  font-size: 20px;
+  font-size: 14px;
   color: #F2F2F2;
   @media (min-width: 576px) {
+    font-size: 18px;
   }
   @media (min-width: 768px) {
-    font-size: 25px;
+    font-size: 22px;
   }
   @media (min-width: 992px) {
-    font-size: 30px;
+    font-size: 26px;
   }
   @media (min-width: 1200px) {
   } ;
 `;
 
-// const ListItem = styled.li`
-//   background: #fff9a4;
-// `;
 
-// Image Provided by flaticon.com
+// Image Provided by flaticon.com (https://www.flaticon.com/free-icon/code_2920244?related_item_id=2920277&term=code)
 const PortfolioImg = styled.img`
   height: 70px;
   width: 70px;

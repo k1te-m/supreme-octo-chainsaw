@@ -25,24 +25,6 @@ const ContactCard = () => {
         <CardTitle className="card-title" style={centered}>
           Contact
         </CardTitle>
-        {/* <p className="card-text" style={{textAlign: "center"}}>
-          To get in touch, please utilize the below contact methods or send me a
-          message via the button below.
-        </p>
-        <ul className="list-group list-group-flush" style={{textAlign: "center"}}>
-          <ListItem className="list-group-item">
-            Email: kmiller343@gmail.com
-          </ListItem>
-          <ListItem className="list-group-item">Cell: (847) 987-9744</ListItem>
-          <ListItem className="list-group-item">
-            <a href="https://www.linkedin.com/in/kmiller29/">LinkedIn</a>
-          </ListItem>
-        </ul>
-        <div style={Centered}>
-          <a href="#" className="btn btn-warning">
-            Contact
-          </a>
-        </div> */}
       </div>
     </Card>
   );
@@ -93,6 +75,7 @@ const Card = styled.div`
   } ;
 `;
 
+// Image Provided by flaticon.com (https://www.flaticon.com/free-icon/contact_1034153?term=contact&page=1&position=1&related_item_id=1034153)
 const ContactImg = styled.img`
   height: 70px;
   width: 70px;
@@ -118,15 +101,16 @@ const ContactImg = styled.img`
 `;
 
 const CardTitle = styled.h1`
-  font-size: 20px;
+  font-size: 14px;
   color: #F2F2F2;
   @media (min-width: 576px) {
+    font-size: 18px;
   }
   @media (min-width: 768px) {
-    font-size: 25px;
+    font-size: 22px;
   }
   @media (min-width: 992px) {
-    font-size: 30px;
+    font-size: 26px;
   }
   @media (min-width: 1200px) {
   } ;
