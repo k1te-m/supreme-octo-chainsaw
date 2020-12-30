@@ -19,8 +19,10 @@ const LoadingImage = styled.img.attrs({
   src: loadImages[randImg],
   alt: "Kevin"
 })`
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
-  border: 4px solid #ffd47f;
+  border: 4px solid #3B945E;
 `;
 
 const rotate = keyframes`
