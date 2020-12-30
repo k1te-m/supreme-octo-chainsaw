@@ -8,7 +8,7 @@ import GitHubCard from "../components/GitHubCard";
 import LinkedInCard from "../components/LinkedInCard";
 import ContactInfoCard from "../components/ContactInfoCard";
 import Modal from "../components/Modal";
-import "./style.css";
+
 
 const Contact = () => {
   const alertContext = useContext(AlertContext);
@@ -28,13 +28,6 @@ const Contact = () => {
   });
   const [displayOptions, setDisplayOptions] = useState({
     display: "none",
-    zIndex: "2",
-    position: "fixed",
-    left: "50%",
-    top: "50%",
-    transform: "translate(-50%, -50%)",
-    height: "auto",
-    width: "auto",
   });
 
   const [infoModal, setInfoModal] = useState({
@@ -42,13 +35,6 @@ const Contact = () => {
   });
   const [infoDisplayOptions, setInfoDisplayOptions] = useState({
     display: "none",
-    zIndex: "2",
-    position: "fixed",
-    left: "50%",
-    top: "50%",
-    transform: "translate(-50%, -50%)",
-    height: "auto",
-    width: "auto",
   });
 
   const handleInputChange = (event) => {
@@ -145,15 +131,16 @@ const Contact = () => {
             <ContactInfoCard />
           </ContactButton>
         </CardLayout>
-
+      </FormContainer>
+      <ModalWrapper>
         <Modal show={messageModal}>
-          <div
+          <ModalDiv
             className="modal container"
             role="dialog"
             id="messageModal"
             style={displayOptions}
           >
-            <div className="modal-header">
+            <ModalHeaderDiv className="modal-header">
               <h3>Thank you!</h3>
               <button
                 type="button"
@@ -164,7 +151,7 @@ const Contact = () => {
               >
                 <span aria-hidden="true">&times;</span>
               </button>
-            </div>
+            </ModalHeaderDiv>
             <div class="modal-body">
               <h5>Your message has been received. 😀</h5>
             </div>
@@ -178,16 +165,16 @@ const Contact = () => {
                 Close
               </button>
             </div>
-          </div>
+          </ModalDiv>
         </Modal>
         <Modal show={infoModal}>
-          <div
+          <ModalDiv
             className="modal container"
             role="dialog"
             id="contactInfo"
             style={infoDisplayOptions}
           >
-            <div className="modal-header">
+            <ModalHeaderDiv className="modal-header">
               <h3 className="modal-title">Contact Info</h3>
               <ContactButton
                 type="button"
@@ -200,22 +187,22 @@ const Contact = () => {
                   <i class="fas fa-window-close" />
                 </span>
               </ContactButton>
-            </div>
+            </ModalHeaderDiv>
             <div className="modal-body contact">
-              <ul className="contact-info">
-                <li className="info">
-                  <i className="far fa-envelope icon" />
+              <ContactInfoList className="contact-info">
+                <ContactInfoListItem className="info">
+                  <i className="far fa-envelope" />
                   <span>kmiller343@gmail.com</span>
-                </li>
-                <li className="info">
-                  <i className="fas fa-phone-volume icon" />
+                </ContactInfoListItem>
+                <ContactInfoListItem className="info">
+                  <i className="fas fa-phone-volume" />
                   <span>(847) 987-9744</span>
-                </li>
-              </ul>
+                </ContactInfoListItem>
+              </ContactInfoList>
             </div>
-          </div>
+          </ModalDiv>
         </Modal>
-      </FormContainer>
+      </ModalWrapper>
     </>
   );
 };
@@ -271,5 +258,49 @@ const ContactButton = styled.button`
   padding: 0;
   margin: 0;
 `;
+
+const ContactInfoList = styled.ul`
+  display: flex;
+  justify-content: center;
+  width: 250px;
+  margin: 0px;
+  padding: 0px;
+  background-color: #ffd47f;
+  border: 3px solid white;
+`;
+
+const ContactInfoListItem = styled.li`
+  display: flex;
+  justify-content: center;
+  width: 250px;
+  i {
+    vertical-align: middle;
+    font-size: 2rem;
+    margin: 5px 10px;
+  }
+`;
+
+const ModalDiv = styled.div`
+  background: #ffd47f;
+  border: 3px solid #ffd47f;
+  border-radius: 5px;
+  z-index: 2;
+  width: 350px;
+  height: 200px;
+  position: relative;
+`;
+
+const ModalHeaderDiv = styled.div`
+  border-bottom: 1px solid #45b08c;
+} 
+`;
+
+const ModalWrapper = styled.div`
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
 
 export default Contact;

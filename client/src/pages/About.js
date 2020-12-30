@@ -3,7 +3,6 @@ import styled, { keyframes } from "styled-components";
 import Navigation from "../components/Navigation";
 import ContactCard from "../components/ContactCard";
 import SideNav from "../components/SideNav";
-import "./style.css";
 import PortfolioCard from "../components/PortfolioCard";
 import Loading from "../components/Loading";
 import LandingText from "../components/LandingText";
