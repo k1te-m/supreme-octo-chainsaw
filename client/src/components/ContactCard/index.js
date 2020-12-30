@@ -104,12 +104,13 @@ const CardTitle = styled.h1`
   font-size: 14px;
   color: #F2F2F2;
   @media (min-width: 576px) {
+    font-size: 18px;
   }
   @media (min-width: 768px) {
-    font-size: 25px;
+    font-size: 22px;
   }
   @media (min-width: 992px) {
-    font-size: 30px;
+    font-size: 26px;
   }
   @media (min-width: 1200px) {
   } ;
