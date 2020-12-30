@@ -124,7 +124,7 @@ const Contact = () => {
             </form>
           </div>
         </div>
-        <CardLayout className="row row-cols-3 m-4 mt-3">
+        <CardLayout className="row row-cols-3">
           <GitHubCard />
           <LinkedInCard />
           <ContactButton type="button" onClick={openInfoModal}>
@@ -228,8 +228,8 @@ const NavigationContainer = styled.div`
 `;
 
 const WhiteHeading = styled.h2`
-  color: white;
-  border-bottom: 0.5px solid#ffd47f;
+  color: #F2F2F2;
+  border-bottom: 0.5px solid #3B945E;
 `;
 
 const fadeIn = keyframes`
@@ -247,8 +247,6 @@ const FormContainer = styled.div`
   position: fixed;
   top: 2%;
   animation: ${fadeIn} 1.5s linear;
-  @media screen and (min-width: 411px) {
-  }
   @media screen and (min-width: 576px) {
   }
   @media screen and (min-width: 768px) {
@@ -261,6 +259,18 @@ const FormContainer = styled.div`
 
 const CardLayout = styled.div`
   justify-content: space-around;
+  @media screen and (min-width: 576px) {
+    margin-top: 35px;
+  }
+  @media screen and (min-width: 768px) {
+    margin-top: 85px;
+  }
+  @media screen and (min-width: 992px) {
+    margin-top: 135px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-top: 25px;
+  }
 `;
 
 const ContactButton = styled.button`

@@ -23,16 +23,19 @@ const Card = styled.div`
   justify-content: center;
   width: 55px;
   height: 55px;
-  border: 2px solid #e6aa68;
-  background: #fff9a4;
+  border: 2px solid #3B945E;
+  border-radius: 50%;
+  background: #F2F2F2;
   @media (min-width: 576px) {
       
   }
   @media (min-width: 768px) {
-    
+    width: 100px;
+    height: 100px;
   }
   @media (min-width: 992px) {
-    
+    width: 150px;
+    height: 150px;
   }
   @media (min-width: 1200px) {
     width: 75px;
@@ -42,19 +45,19 @@ const Card = styled.div`
     animation: ${pulse} 1s infinite;
   }
   i {
-    color:#ffd47f;
+    color:#182628;
     font-size: 2rem;
     @media (min-width: 576px) {
       
     }
     @media (min-width: 768px) {
-      
+      font-size: 4rem;
     }
     @media (min-width: 992px) {
-      
+      font-size: 6rem;
     }
     @media (min-width: 1200px) {
-      font-size: 4rem;
+      font-size: 3rem;
     } ;
   }
 `;

@@ -32,9 +32,11 @@ export function FormBtn(props) {
 }
 
 const ContactTextArea = styled.textarea`
+  color: #F2F2F2;
   background-color: #182628;
   border: 2px solid #3B945E;
   :focus {
+    color: #F2F2F2;
     background-color: #182628;
     outline: none !important;
     border:1px solid #3B945E;
