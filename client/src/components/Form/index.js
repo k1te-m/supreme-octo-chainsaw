@@ -32,13 +32,13 @@ export function FormBtn(props) {
 }
 
 const ContactTextArea = styled.textarea`
-  background-color: #fff9a4;
-  border: 2px solid #ffd47f;
+  background-color: #182628;
+  border: 2px solid #3B945E;
   :focus {
-    background-color: #fff9a4;
+    background-color: #182628;
     outline: none !important;
-    border:1px solid red;
-    box-shadow: 0 0 10px#ffd47f;
+    border:1px solid #3B945E;
+    box-shadow: 0 0 10px #57BA98;
   }
   height: 200px;
   @media screen and (min-width: 576px) {
@@ -59,12 +59,14 @@ const FormLabel = styled.label`
 `;
 
 const FormInput = styled.input`
-  background-color: #fff9a4;
-  border: 2px solid #ffd47f;
+  color: #F2F2F2;
+  background-color: #182628;
+  border: 2px solid #3B945E;
   :focus {
-    background-color: #fff9a4;
+    color: #F2F2F2;
+    background-color: #182628;
     outline: none !important;
-    border:1px solid red;
-    box-shadow: 0 0 10px#ffd47f;
+    border:1px solid #3B945E;
+    box-shadow: 0 0 10px #57BA98;
   }
 `
