@@ -6,6 +6,7 @@ import SideNav from "../components/SideNav";
 import "./style.css";
 import PortfolioCard from "../components/PortfolioCard";
 import Loading from "../components/Loading";
+import LandingText from "../components/LandingText";
 
 const About = () => {
   const [loadWheel, setLoadWheel] = useState(true);
@@ -32,10 +33,7 @@ const About = () => {
         <Navigation />
       </NavigationContainer>
       <SlideInUpDiv>
-        <AboutContainer className="container">
-          <AboutHeader>My name is Kevin Miller.</AboutHeader>
-          <AboutDescription>Pellentesque mollis erat lectus, a tempus ipsum consectetur quis. Quisque mollis lorem in felis semper, in pulvinar lacus gravida. Phasellus quis nibh pharetra ex tristique suscipit id a ex. Cras vitae augue eget velit bibendum rutrum vitae sed ex. Duis ex sem, consectetur et nunc ut, consequat pharetra dui. In placerat arcu vitae luctus mattis. Suspendisse nec nisi quis urna viverra feugiat at sed dui. Aliquam venenatis congue accumsan. Etiam ut nunc tincidunt, efficitur ante sed, sollicitudin nibh.</AboutDescription>
-        </AboutContainer>
+        <LandingText />
       </SlideInUpDiv>
       <SlideInRightDiv>
         <PortfolioCard />
@@ -45,32 +43,7 @@ const About = () => {
       </SlideInLeftDiv>
     </>
   );
-}; 
-
-const AboutHeader = styled.h1`
-  font-size: 25px;
-  color: #F2F2F2;
-  text-align: center;
-  @media screen and (min-width: 576px) {
-    font-size: 35px;
-  }
-  @media screen and (min-width: 768px) {
-    font-size: 45px;
-  }
-  @media screen and (min-width: 992px) {
-    font-size: 65px;
-  }
-  @media screen and (min-width: 1200px) {
-    font-size: 65px;
-  }
-`;
-
-const AboutDescription = styled.p`
-  color: #F2F2F2;
-`
-
-const AboutContainer = styled.div`
-text-align: center;`;
+};
 
 const slideInUP = keyframes`
 from {
@@ -162,9 +135,9 @@ const SlideInLeftDiv = styled.div`
 `;
 
 const NavigationContainer = styled.div`
-position: fixed;
-top: 0%;
-right: 0%;
-`
+  position: fixed;
+  top: 0%;
+  right: 0%;
+`;
 
 export default About;
