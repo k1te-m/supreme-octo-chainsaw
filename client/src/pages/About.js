@@ -48,7 +48,7 @@ const About = () => {
 const slideInUP = keyframes`
 from {
   opacity: 0;
-  transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 30%, 0);
   visibility: 'visible'
 }
 to {
@@ -69,32 +69,41 @@ to {
 
 const SlideInUpDiv = styled.div`
   animation: ${slideInUP} 2s ease-in-out;
+  @media (orientation: landscape) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 const SlideInRightDiv = styled.div`
   position: fixed;
   bottom: 5%;
-  right: 5%;
+  right: 9%;
   @media screen and (min-width: 576px) {
     position: fixed;
-    bottom: 3%;
-    right: 5%;
+    bottom: 7%;
+    right: 9%;
   }
   @media screen and (min-width: 768px) {
     position: fixed;
-    bottom: 3%;
-    right: 5%;
+    bottom: 7%;
+    right: 10%;
   }
   @media screen and (min-width: 992px) {
     position: fixed;
-    right: 7%;
-    bottom: 5%;
+    right: 13%;
+    bottom: 7%;
   }
   @media screen and (min-width: 1200px) {
     position: fixed;
     bottom: 3%;
     right: 10%;
   }
+  @media screen and (max-width: 1024px) and (orientation: landscape){
+    display: none;
+  }
+  
   animation: ${slideInRight} 3s ease-in-out;
 `;
 
@@ -110,26 +119,29 @@ to {
 const SlideInLeftDiv = styled.div`
   position: fixed;
   bottom: 5%;
-  left: 5%;
+  left: 9%;
   @media screen and (min-width: 576px) {
     position: fixed;
-    bottom: 3%;
-    left: 5%;
+    bottom: 7%;
+    left: 9%;
   }
   @media screen and (min-width: 768px) {
     position: fixed;
-    bottom: 3%;
-    left: 5%;
+    bottom: 7%;
+    left: 10%;
   }
   @media screen and (min-width: 992px) {
     position: fixed;
-    left: 7%;
-    bottom: 5%;
+    left: 13%;
+    bottom: 7%;
   }
   @media screen and (min-width: 1200px) {
     position: fixed;
     bottom: 3%;
     left: 10%;
+  }
+  @media screen and (max-width: 1024px) and (orientation: landscape){
+    display: none;
   }
   animation: ${slideInLeft} 3s ease-in-out;
 `;
