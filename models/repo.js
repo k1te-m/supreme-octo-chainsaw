@@ -6,6 +6,7 @@ const repoSchema = new Schema({
     github: {type: String},
     imageURL: {type: String},
     description: {type: String},
+    languages: [String],
 })
 
 const Repo = mongoose.model("Repo", repoSchema);
