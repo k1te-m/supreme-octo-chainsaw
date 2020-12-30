@@ -190,15 +190,20 @@ const Contact = () => {
             </ModalHeaderDiv>
             <div className="modal-body contact">
               <ContactInfoList className="contact-info">
-                <ContactInfoListItem className="info">
+                <ContactInfoListItem className="info row">
                   <i className="far fa-envelope" />
                   <span>kmiller343@gmail.com</span>
                 </ContactInfoListItem>
-                <ContactInfoListItem className="info">
+                <ContactInfoListItem className="info row">
                   <i className="fas fa-phone-volume" />
                   <span>(847) 987-9744</span>
                 </ContactInfoListItem>
+                <ImgContainer>
+                  <img src="../images/city.png" />
+                </ImgContainer>
               </ContactInfoList>
+
+              
             </div>
           </ModalDiv>
         </Modal>
@@ -207,6 +212,14 @@ const Contact = () => {
   );
 };
 
+const ImgContainer = styled.div`
+  position: absolute;
+  left: 60%;
+  top: 15%;
+
+  
+
+`
 const NavigationContainer = styled.div`
   position: fixed;
   top: 0%;
@@ -260,34 +273,45 @@ const ContactButton = styled.button`
 `;
 
 const ContactInfoList = styled.ul`
-  display: flex;
-  justify-content: center;
   width: 250px;
   margin: 0px;
   padding: 0px;
-  background-color: #ffd47f;
-  border: 3px solid white;
 `;
 
 const ContactInfoListItem = styled.li`
   display: flex;
   justify-content: center;
-  width: 250px;
+  width: 100%;
   i {
     vertical-align: middle;
-    font-size: 2rem;
+    font-size: 1rem;
     margin: 5px 10px;
   }
 `;
 
 const ModalDiv = styled.div`
-  background: #ffd47f;
-  border: 3px solid #ffd47f;
+  background: #182628;
+  border: 3px solid #3B945E;
   border-radius: 5px;
   z-index: 2;
   width: 350px;
   height: 200px;
   position: relative;
+  color: #F2F2F2;
+  font-size: 15px;
+  @media (min-width: 576px) {
+    
+  }
+  @media (min-width: 768px) {
+    width: 500px;
+    height: 250px;
+  }
+  @media (min-width: 992px) {
+    
+  }
+  @media (min-width: 1200px) {
+    
+  } ;
 `;
 
 const ModalHeaderDiv = styled.div`
