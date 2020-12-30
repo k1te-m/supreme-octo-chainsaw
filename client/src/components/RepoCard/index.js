@@ -2,40 +2,132 @@ import React from "react";
 import styled from "styled-components";
 
 const RepoCard = ({ value }) => {
+  const { imageURL, name, description, github, languages } = value;
+  console.log(value.languages[0]);
   return (
-    <CardStyled className="card">
-      <RepoImg className="card-img-top" src={value.imageURL} alt={value.name} />
-      <div className="card-body">
-        <h5 className="card-title">{value.name}</h5>
-        <p className="card-text">{value.description}</p>
+      <CardStyled className="card">
         <a
-          href={`https://www.github.com/${value.github}/${value.name}`}
-          className="btn btn-warning"
+          href={`https://www.github.com/${github}/${name}`}
           target="_blank"
           rel="noreferrer"
         >
-          GitHub Repository
+          <RepoImg className="card-img-top" src={imageURL} alt={name} />
         </a>
-      </div>
-    </CardStyled>
+        <CardBodyDiv className="card-body">
+          <CardTitle className="card-title">{name}</CardTitle>
+          <CardList className="list-group">
+            {languages.map((language) => {
+              return <CardListItem>{language}</CardListItem>;
+            })}
+          </CardList>
+          <CardText className="card-text">{description}</CardText>
+          {/* <a
+            href={`https://www.github.com/${github}/${name}`}
+            className="btn btn-warning"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub Repository
+          </a> */}
+        </CardBodyDiv>
+      </CardStyled>
   );
 };
 
 const CardStyled = styled.div`
-  width: 425px;
-  height: 500px;
+  width: 350px;
+  height: auto;
   align-items: center;
   margin: 0 auto;
   float: none;
   justify-content: center;
   margin-bottom: 10px;
   overflow-y: auto;
-  padding-top: 200px;
+  padding-top: 0px;
+  background-color: #182628;
+  border: 1px solid #3B945E;
+  @media (min-width: 576px) {
+    width: 550px;
+  }
+  @media (min-width: 768px) {
+  }
+  @media (min-width: 992px) {
+  }
+  @media (min-width: 1200px) {
+  }
 `;
 
 const RepoImg = styled.img`
-  width: 385px;
-  height: 440px;
+  width: 348px;
+  height: auto;
+  margin-top: 0px;
+  padding-top: 0px;
+  object-fit: cover;
+  @media (min-width: 576px) {
+    width: 548px;
+  }
+  @media (min-width: 768px) {
+  }
+  @media (min-width: 992px) {
+  }
+  @media (min-width: 1200px) {
+  }
 `;
+
+const CardList = styled.ul`
+  display: inline;
+  list-style-type: none;
+  li:not(:first-child):before {
+    content: " | ";
+  text-align: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 350px;
+  
+`
+const CardListItem = styled.li`
+  font-size: 10.5px;
+  display: inline;
+  list-style-type: none;
+  overflow: hidden;
+  padding: auto;
+  margin: auto;
+  padding-left: 0px;
+  color: #3B945E;
+  @media (min-width: 576px) {
+    font-size: 13px;
+  }
+  @media (min-width: 768px) {
+  }
+  @media (min-width: 992px) {
+  }
+  @media (min-width: 1200px) {
+  }
+`
+
+const CardBodyDiv = styled.div`
+  text-align: center;
+`
+
+const CardTitle = styled.h5`
+  text-align: center;
+  color: #57BA98;
+  margin-bottom: 0px;
+  border-bottom: 1px solid #65CCB8;
+  @media (min-width: 576px) {
+    font-size: 25px;
+  }
+  @media (min-width: 768px) {
+  }
+  @media (min-width: 992px) {
+  }
+  @media (min-width: 1200px) {
+  }
+`
+
+const CardText = styled.div`
+  color: #F2F2F2;
+  font-size: 14px;
+`
 
 export default RepoCard;
