@@ -50,10 +50,13 @@ const CardStyled = styled.div`
     width: 550px;
   }
   @media (min-width: 768px) {
+    width: 700px;
   }
   @media (min-width: 992px) {
+    width: 950px;
   }
   @media (min-width: 1200px) {
+    width: 500px;
   }
 `;
 
@@ -67,10 +70,13 @@ const RepoImg = styled.img`
     width: 548px;
   }
   @media (min-width: 768px) {
+    width: 698px;
   }
   @media (min-width: 992px) {
+    width: 948px;
   }
   @media (min-width: 1200px) {
+    width: 498px;
   }
 `;
 
@@ -98,6 +104,7 @@ const CardListItem = styled.li`
     font-size: 13px;
   }
   @media (min-width: 768px) {
+    font-size: 16px;
   }
   @media (min-width: 992px) {
   }
@@ -107,6 +114,7 @@ const CardListItem = styled.li`
 
 const CardBodyDiv = styled.div`
   text-align: center;
+  align-content: center;
 `
 
 const CardTitle = styled.h5`
@@ -118,6 +126,7 @@ const CardTitle = styled.h5`
     font-size: 25px;
   }
   @media (min-width: 768px) {
+    font-size: 40px;
   }
   @media (min-width: 992px) {
   }
@@ -128,6 +137,16 @@ const CardTitle = styled.h5`
 const CardText = styled.div`
   color: #F2F2F2;
   font-size: 14px;
+  @media (min-width: 576px) {
+    font-size: 16px;
+  }
+  @media (min-width: 768px) {
+    font-size: 18px;
+  }
+  @media (min-width: 992px) {
+  }
+  @media (min-width: 1200px) {
+  }
 `
 
 export default RepoCard;
