@@ -299,7 +299,6 @@ const ModalDiv = styled.div`
   background: #182628;
   border: 3px solid #3b945e;
   border-radius: 5px;
-  z-index: 2;
   width: 350px;
   height: 200px;
   position: relative;
