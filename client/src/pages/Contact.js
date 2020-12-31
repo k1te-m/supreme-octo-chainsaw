@@ -9,7 +9,6 @@ import LinkedInCard from "../components/LinkedInCard";
 import ContactInfoCard from "../components/ContactInfoCard";
 import Modal from "../components/Modal";
 
-
 const Contact = () => {
   const alertContext = useContext(AlertContext);
 
@@ -202,8 +201,6 @@ const Contact = () => {
                   <img src="../images/city.png" />
                 </ImgContainer>
               </ContactInfoList>
-
-              
             </div>
           </ModalDiv>
         </Modal>
@@ -216,10 +213,7 @@ const ImgContainer = styled.div`
   position: absolute;
   left: 60%;
   top: 15%;
-
-  
-
-`
+`;
 const NavigationContainer = styled.div`
   position: fixed;
   top: 0%;
@@ -228,8 +222,8 @@ const NavigationContainer = styled.div`
 `;
 
 const WhiteHeading = styled.h2`
-  color: #F2F2F2;
-  border-bottom: 0.5px solid #3B945E;
+  color: #f2f2f2;
+  border-bottom: 0.5px solid #3b945e;
 `;
 
 const fadeIn = keyframes`
@@ -281,7 +275,7 @@ const ContactButton = styled.button`
   padding: 0;
   margin: 0;
   font-size: 2rem;
-  color: #65CCB8
+  color: #65ccb8;
 `;
 
 const ContactInfoList = styled.ul`
@@ -303,26 +297,23 @@ const ContactInfoListItem = styled.li`
 
 const ModalDiv = styled.div`
   background: #182628;
-  border: 3px solid #3B945E;
+  border: 3px solid #3b945e;
   border-radius: 5px;
   z-index: 2;
   width: 350px;
   height: 200px;
   position: relative;
-  color: #F2F2F2;
+  color: #f2f2f2;
   font-size: 15px;
   @media (min-width: 576px) {
-    
   }
   @media (min-width: 768px) {
     width: 500px;
     height: 250px;
   }
   @media (min-width: 992px) {
-    
   }
   @media (min-width: 1200px) {
-    
   } ;
 `;
 
@@ -337,6 +328,6 @@ const ModalWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-`
+`;
 
 export default Contact;
