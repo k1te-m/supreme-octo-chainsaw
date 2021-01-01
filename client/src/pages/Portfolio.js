@@ -18,7 +18,6 @@ const Portfolio = () => {
     });
   };
   useEffect(() => {
-    console.log(repoState);
     getRepos();
     setTimeout(() => {
       setLoadWheel(false);

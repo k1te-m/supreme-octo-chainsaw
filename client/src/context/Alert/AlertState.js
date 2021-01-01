@@ -25,7 +25,6 @@ const AlertState = (props) => {
         setAlert,
       }}
     >
-      {console.log(state)}
       {props.children}
     </AlertContext.Provider>
   );

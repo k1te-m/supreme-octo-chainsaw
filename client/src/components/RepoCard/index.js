@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 const RepoCard = ({ value }) => {
   const { imageURL, name, description, github, languages } = value;
-  console.log(value.languages[0]);
   return (
       <CardStyled className="card">
         <a
