@@ -7,43 +7,6 @@ import PortfolioCard from "../components/PortfolioCard";
 import Loading from "../components/Loading";
 import LandingText from "../components/LandingText";
 
-const About = () => {
-  const [loadWheel, setLoadWheel] = useState(true);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    setTimeout(() => {
-      setLoadWheel(false);
-    }, 2000);
-  }, []);
-
-  if (loadWheel === true) {
-    return (
-      <div>
-        <Loading />
-      </div>
-    );
-  }
-
-  return (
-    <>
-      <SideNav />
-      <NavigationContainer>
-        <Navigation />
-      </NavigationContainer>
-      <SlideInUpDiv>
-        <LandingText />
-      </SlideInUpDiv>
-      <SlideInRightDiv>
-        <PortfolioCard />
-      </SlideInRightDiv>
-      <SlideInLeftDiv>
-        <ContactCard />
-      </SlideInLeftDiv>
-    </>
-  );
-};
-
 const slideInUP = keyframes`
 from {
   opacity: 0;
@@ -99,10 +62,10 @@ const SlideInRightDiv = styled.div`
     bottom: 3%;
     right: 10%;
   }
-  @media screen and (max-width: 1024px) and (orientation: landscape){
+  @media screen and (max-width: 1024px) and (orientation: landscape) {
     display: none;
   }
-  
+
   animation: ${slideInRight} 3s ease-in-out;
 `;
 
@@ -139,7 +102,7 @@ const SlideInLeftDiv = styled.div`
     bottom: 3%;
     left: 10%;
   }
-  @media screen and (max-width: 1024px) and (orientation: landscape){
+  @media screen and (max-width: 1024px) and (orientation: landscape) {
     display: none;
   }
   animation: ${slideInLeft} 3s ease-in-out;
@@ -150,5 +113,42 @@ const NavigationContainer = styled.div`
   top: 0%;
   right: 0%;
 `;
+
+const About = () => {
+  const [loadWheel, setLoadWheel] = useState(true);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    setTimeout(() => {
+      setLoadWheel(false);
+    }, 2000);
+  }, []);
+
+  if (loadWheel === true) {
+    return (
+      <div>
+        <Loading />
+      </div>
+    );
+  }
+
+  return (
+    <>
+      <SideNav />
+      <NavigationContainer>
+        <Navigation />
+      </NavigationContainer>
+      <SlideInUpDiv>
+        <LandingText />
+      </SlideInUpDiv>
+      <SlideInRightDiv>
+        <PortfolioCard />
+      </SlideInRightDiv>
+      <SlideInLeftDiv>
+        <ContactCard />
+      </SlideInLeftDiv>
+    </>
+  );
+};
 
 export default About;

@@ -1,6 +1,60 @@
 import React from "react";
 import styled from "styled-components";
 
+const ContactTextArea = styled.textarea`
+  color: #f2f2f2;
+  background-color: #182628;
+  border: 2px solid #3b945e;
+  :focus {
+    color: #f2f2f2;
+    background-color: #182628;
+    outline: none !important;
+    border: 1px solid #3b945e;
+    box-shadow: 0 0 10px #57ba98;
+  }
+  height: 200px;
+  @media screen and (min-width: 576px) {
+    height: 350px;
+  }
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 992px) {
+  }
+  @media screen and (min-width: 1200px) {
+  }
+`;
+
+const FormLabel = styled.label`
+  color: #f2f2f2;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+`;
+
+const FormInput = styled.input`
+  color: #f2f2f2;
+  background-color: #182628;
+  border: 2px solid #3b945e;
+  :focus {
+    color: #f2f2f2;
+    background-color: #182628;
+    outline: none !important;
+    border: 1px solid #3b945e;
+    box-shadow: 0 0 10px #57ba98;
+  }
+`;
+const FormButton = styled.button`
+  color: #f2f2f2;
+  background-color: #182628;
+  border: 2px solid #3b945e;
+  :hover {
+    background-color: #3b945e;
+    border: 2px solid #182628;
+  }
+  :focus {
+    box-shadow: 0 0 10px #57ba98;
+  }
+`;
+
 export function Input(props) {
   return (
     <div className="form-group col-12">
@@ -30,57 +84,3 @@ export function FormBtn(props) {
     </FormButton>
   );
 }
-
-const ContactTextArea = styled.textarea`
-  color: #F2F2F2;
-  background-color: #182628;
-  border: 2px solid #3B945E;
-  :focus {
-    color: #F2F2F2;
-    background-color: #182628;
-    outline: none !important;
-    border:1px solid #3B945E;
-    box-shadow: 0 0 10px #57BA98;
-  }
-  height: 200px;
-  @media screen and (min-width: 576px) {
-    height: 350px;
-  }
-  @media screen and (min-width: 768px) {
-  }
-  @media screen and (min-width: 992px) {
-  }
-  @media screen and (min-width: 1200px) {
-  }
-`;
-
-const FormLabel = styled.label`
-  color: white;
-  font-size: 1.5rem;
-  margin-bottom: 5px;
-`;
-
-const FormInput = styled.input`
-  color: #F2F2F2;
-  background-color: #182628;
-  border: 2px solid #3B945E;
-  :focus {
-    color: #F2F2F2;
-    background-color: #182628;
-    outline: none !important;
-    border:1px solid #3B945E;
-    box-shadow: 0 0 10px #57BA98;
-  }
-`
-const FormButton = styled.button`
-  color: #F2F2F2;
-  background-color: #182628;
-  border: 2px solid #3B945E;
-  :hover {
-    background-color: #3B945E;
-    border: 2px solid #182628;
-  }
-  :focus {
-    box-shadow: 0 0 10px #57BA98;
-  }
-`
