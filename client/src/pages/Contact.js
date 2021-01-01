@@ -211,11 +211,11 @@ to {
 const FormContainer = styled.div`
 position: fixed;
 top: 2%;
-
+height: 100%;
 width: 100%;
 overflow: auto;
 ::-webkit-scrollbar {
-  display: none;
+  display: none;}
 animation: ${fadeIn} 1.5s linear;
 @media screen and (min-width: 576px) {
 }
