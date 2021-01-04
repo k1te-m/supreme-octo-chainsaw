@@ -5,7 +5,7 @@ const GitHubCard = () => {
   return (
     <Card className="card">
       <a href="https://github.com/k1te-m" target="_blank" rel="noreferrer">
-        <i class="fab fa-github" />
+        <i className="fab fa-github" />
       </a>
     </Card>
   );

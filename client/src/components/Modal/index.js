@@ -28,7 +28,7 @@ const ModalContainer = styled(motion.div)`
     
   }
   @media screen and (min-width: 992px) {
-    width: 550px;
+    
   }
   @media screen and (min-width: 1200px) {
   }
@@ -73,7 +73,7 @@ const Modal = ({ handleClose, children, isOpen, messageSent }) => {
         >
           <ModalContainer variants={containerVariant}>
             <CloseButton onClick={handleClose}>
-              <i class="far fa-times-circle" />
+              <i className="far fa-times-circle" />
             </CloseButton>
             {children}
           </ModalContainer>
@@ -89,7 +89,7 @@ const Modal = ({ handleClose, children, isOpen, messageSent }) => {
           <ModalContainer variants={containerVariant}>
             <CloseButton onClick={handleClose}>
               <span aria-hidden="true">
-                <i class="far fa-times-circle" />
+                <i className="far fa-times-circle" />
               </span>
             </CloseButton>
             {children}

@@ -4,7 +4,7 @@ import styled, { keyframes } from "styled-components";
 const ContactInfoCard = () => {
   return (
     <Card className="card">
-      <i class="fas fa-info-circle" />
+      <i className="fas fa-info-circle" />
     </Card>
   );
 };
