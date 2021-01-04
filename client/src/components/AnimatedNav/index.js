@@ -11,25 +11,36 @@ const Overlay = styled(motion.div)`
   background: rgba(0, 0, 0, 0.3);
 `;
 const NavigationContainer = styled(motion.div)`
-  width: 90%;
-  height: 90%;
-  background-color: #182628;
+  width: 65%;
+  height: auto;
+  padding: 10px 35px 35px 35px;
+  background-color: #65CCB8;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #182628;
+  border-radius: 15px;
 `;
 const CloseButton = styled.button`
   position: absolute;
-  right: 3%;
+  left: 50%;
+  bottom: -6%;
+  transform: translate(-50%, -50%);
   height: auto;
   width: auto;
   background: transparent;
   border: none;
-  padding: 0;
+  padding: 0px;
+  i {
+    padding: 5px;
+  }
   margin: 0;
   font-size: 1.5rem;
-  color: #65ccb8;
+  color: #182628;
 `;
 const navVariant = {
   initial: { opacity: 0 },
@@ -42,26 +53,28 @@ const containerVariant = {
   exit: { top: "-50%" },
 };
 
-const AnimatedNav = ({ handleClose, children, navOpen}) => {
-    return (
-        <AnimatePresence>
-            {navOpen && (
-                <Overlay
-                    initial={"initial"}
-                    animate={"navOpen"}
-                    exit={"exit"}
-                    variants={navVariant}
-                >
-                    <NavigationContainer variants={containerVariant}>
-                        <CloseButton onClick={handleClose}>
-                            <i class="far fa-times-circle" />
-                        </CloseButton>
-                        {children}
-                    </NavigationContainer>
-                </Overlay>
-            )}
-        </AnimatePresence>
-    )
-}
+const AnimatedNav = ({ handleClose, children, navOpen }) => {
+  return (
+    <AnimatePresence>
+      {navOpen && (
+        <Overlay
+          initial={"initial"}
+          animate={"navOpen"}
+          exit={"exit"}
+          variants={navVariant}
+        >
+          <NavigationContainer variants={containerVariant}>
+            {children}
+            <CloseButton
+              onClick={handleClose}
+            >
+              <i className="far fa-times-circle" />
+            </CloseButton>
+          </NavigationContainer>
+        </Overlay>
+      )}
+    </AnimatePresence>
+  );
+};
 
 export default AnimatedNav;
