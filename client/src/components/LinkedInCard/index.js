@@ -5,7 +5,7 @@ const LinkedInCard = () => {
   return (
     <Card className="card">
       <a href="https://www.linkedin.com/in/kmiller29/" target="_blank" rel="noreferrer">
-        <i class="fab fa-linkedin" />
+        <i className="fab fa-linkedin" />
       </a>
     </Card>
   );

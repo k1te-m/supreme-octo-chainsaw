@@ -7,12 +7,12 @@ const SideNav = () => {
       <ul className="list-group">
         <li className="list-group-item">
           <a href="https://github.com/k1te-m" target="_blank" rel="noreferrer">
-            <i class="fab fa-github"></i>
+            <i className="fab fa-github"></i>
           </a>
         </li>
         <li className="list-group-item">
           <a href="https://www.linkedin.com/in/kmiller29/" target="_blank" rel="noreferrer">
-            <i class="fab fa-linkedin"></i>
+            <i className="fab fa-linkedin"></i>
           </a>
         </li>
         <li className="list-group-item">
@@ -21,7 +21,7 @@ const SideNav = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <i class="fas fa-file" />
+            <i className="fas fa-file" />
           </a>
         </li>
       </ul>
