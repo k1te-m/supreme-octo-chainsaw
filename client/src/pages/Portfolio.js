@@ -7,6 +7,7 @@ import Navigation from "../components/Navigation";
 import SideNav from "../components/SideNav";
 import { AnimatePresence, motion } from "framer-motion";
 import { wrap } from "popmotion";
+import "./style.css";
 
 const Portfolio = () => {
   const [loadWheel, setLoadWheel] = useState(true);
@@ -31,7 +32,7 @@ const Portfolio = () => {
   const variants = {
     enter: (direction) => {
       return {
-        x: direction > 0 ? 1000 : -1000,
+        x: direction > 0 ? 5000 : -5000,
         opacity: 0,
       };
     },
@@ -75,13 +76,13 @@ const Portfolio = () => {
         <NavigationContainer>
           <Navigation />
         </NavigationContainer>
-        <PortfolioWrapper>
+        {/* <PortfolioWrapper> */}
           <PortfolioContainer className="container-fluid">
-            <PortfolioRow className="row mt-3 mb-3">
+            {/* <PortfolioRow className="row mt-3 mb-3">
               <div className="col">
                 <PortfolioHeader>Portfolio</PortfolioHeader>
               </div>
-            </PortfolioRow>
+            </PortfolioRow> */}
             <AnimatePresence initial={false} custom={direction}>
               <motion.div
                 key={page}
@@ -91,7 +92,7 @@ const Portfolio = () => {
                 animate="center"
                 exit="exit"
                 transition={{
-                  x: { type: "spring", stiffness: 300, damping: 30 },
+                  x: { type: "smooth", stiffness: 400, damping: 30 },
                   opacity: { duration: 0.2 },
                 }}
                 drag="x"
@@ -107,14 +108,14 @@ const Portfolio = () => {
                   }
                 }}
               >
-                <RepoCard value={repoState[repoIndex]} />
+                <RepoCard value={repoState[repoIndex]} id={repoState[repoIndex]._id} className="repo-card" />
               </motion.div>
             </AnimatePresence>
             <div className="next" onClick={() => paginate(1)}>
-              next
+              <i className="fas fa-chevron-circle-right" />
             </div>
             <div className="prev" onClick={() => paginate(-1)}>
-              prev
+              <i className="fas fa-chevron-circle-right" />
             </div>
             {/* <PortfolioRow className="row mt-0 mb-5 row-cols-3 justify-content-center">
               {repoState.map((repo) => {
@@ -122,30 +123,64 @@ const Portfolio = () => {
               })}
             </PortfolioRow> */}
           </PortfolioContainer>
-        </PortfolioWrapper>
+        {/* </PortfolioWrapper> */}
       </>
     );
   }
 };
 
 const NavigationContainer = styled.div`
-  position: fixed;
+  position: absolute;
   top: 0%;
   right: 0%;
   z-index: 9999;
 `;
 
 const PortfolioWrapper = styled.div`
-  position: fixed;
-  top: 2%;
-  height: 100%;
-  width: 100%;
-  overflow: auto;
-  ::-webkit-scrollbar {
-    display: none;
+  // position: relative;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // overflow: hidden;
 `;
 
-const PortfolioContainer = styled.div``;
+const PortfolioContainer = styled.div`
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  i {
+    color: #f2f2f2;
+  }
+  .next,
+  .prev {
+    top: calc(50% - 20px);
+    position: absolute;
+    background: white;
+    border-radius: 30px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    z-index: 2;
+  }
+  .next {
+    right: 10px;
+  }
+  .prev {
+    left: 10px;
+    transform: scale(-1);
+  }
+  
+  
+`;
 
 const PortfolioRow = styled.div`
   margin-top: 11%;
