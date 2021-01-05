@@ -27,7 +27,7 @@ const Navigation = () => {
         </NavButton>
       </ButtonContainer>
       <AnimatedNav navOpen={navOpen} handleClose={() => handleOpenNav(false)}>
-        <NavigationContainer className="container-fluid">
+        <NavigationContainer className="container">
           <NavBarUL className="navbar-nav">
             <NavBarLI
               className="nav-item"
@@ -146,6 +146,8 @@ const Navigation = () => {
 
 const NavigationContainer = styled.div`
   padding: 0px;
+  height: 100%;
+  width: 100%;
 `;
 
 const NavButton = styled(motion.button)`
