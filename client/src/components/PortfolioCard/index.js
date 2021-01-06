@@ -10,8 +10,8 @@ const PortfolioCard = () => {
   const flexCenter = {
     display: "flex",
     alignItems: "center",
-    justifyContent: "center"
-  }
+    justifyContent: "center",
+  };
 
   return (
     <Card className="card">
@@ -43,7 +43,7 @@ const Card = styled.div`
   justify-content: center;
   height: 120px;
   width: 120px;
-  border: 2px solid #3B945E;
+  border: 2px solid #3b945e;
   border-radius: 50%;
   background: #182628;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -70,7 +70,7 @@ const Card = styled.div`
 
 const CardTitle = styled.h1`
   font-size: 14px;
-  color: #F2F2F2;
+  color: #f2f2f2;
   @media (min-width: 576px) {
     font-size: 18px;
   }
@@ -83,7 +83,6 @@ const CardTitle = styled.h1`
   @media (min-width: 1200px) {
   } ;
 `;
-
 
 // Image Provided by flaticon.com (https://www.flaticon.com/free-icon/code_2920244?related_item_id=2920277&term=code)
 const PortfolioImg = styled.img`

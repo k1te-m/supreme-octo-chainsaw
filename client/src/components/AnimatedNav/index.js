@@ -14,7 +14,7 @@ const NavigationContainer = styled(motion.div)`
   width: 65%;
   height: auto;
   padding: 10px 35px 35px 35px;
-  background-color: #65CCB8;
+  background-color: #65ccb8;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -65,9 +65,7 @@ const AnimatedNav = ({ handleClose, children, navOpen }) => {
         >
           <NavigationContainer variants={containerVariant}>
             {children}
-            <CloseButton
-              onClick={handleClose}
-            >
+            <CloseButton onClick={handleClose}>
               <i className="far fa-times-circle" />
             </CloseButton>
           </NavigationContainer>

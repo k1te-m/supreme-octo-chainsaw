@@ -39,7 +39,6 @@ const Contact = () => {
     setMessageObject({ ...messageObject, [name]: value });
   };
 
-
   const handleFormSubmit = (event) => {
     event.preventDefault();
     const mailformat = /.+@.+\..+/;
@@ -119,7 +118,7 @@ const Contact = () => {
               <div className="col-7">
                 <h1>Thank you!</h1>
                 <div className="row">
-                <h3>Your message has been received. 😀</h3>
+                  <h3>Your message has been received. 😀</h3>
                 </div>
               </div>
               <div className="col">
@@ -162,39 +161,37 @@ const Contact = () => {
 };
 
 const ImgContainer = styled.div`
-display: flex;
-justify-content: center;
-align-items: center;
-height: 100%;
-img {
-  height: 85px;
-  width: 85px;
-  border-radius: 50%;
-  border: 1px solid #3b945e;
-  @media screen and (min-width: 576px) {
-    height: 125px;
-    width: 125px;
-   
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  img {
+    height: 85px;
+    width: 85px;
+    border-radius: 50%;
+    border: 1px solid #3b945e;
+    @media screen and (min-width: 576px) {
+      height: 125px;
+      width: 125px;
+    }
+    @media screen and (min-width: 768px) {
+    }
+    @media screen and (min-width: 992px) {
+    }
+    @media screen and (min-width: 1200px) {
+    }
   }
-  @media screen and (min-width: 768px) {
-  }
-  @media screen and (min-width: 992px) {
-    
-  }
-  @media screen and (min-width: 1200px) {
-  }
-}
 `;
 const NavigationContainer = styled.div`
-position: fixed;
-top: 0%;
-right: 0%;
-z-index: 9999;
+  position: fixed;
+  top: 0%;
+  right: 0%;
+  z-index: 9999;
 `;
 
 const WhiteHeading = styled.h2`
-color: #f2f2f2;
-border-bottom: 0.5px solid #3b945e;
+  color: #f2f2f2;
+  border-bottom: 0.5px solid #3b945e;
 `;
 
 const fadeIn = keyframes`
@@ -209,52 +206,53 @@ to {
 `;
 
 const FormContainer = styled.div`
-position: fixed;
-top: 2%;
-height: 100%;
-width: 100%;
-overflow: auto;
-::-webkit-scrollbar {
-  display: none;}
-animation: ${fadeIn} 1.5s linear;
-@media screen and (min-width: 576px) {
-}
-@media screen and (min-width: 768px) {
-}
-@media screen and (min-width: 992px) {
-}
-@media screen and (min-width: 1200px) {
-}
+  position: fixed;
+  top: 2%;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  animation: ${fadeIn} 1.5s linear;
+  @media screen and (min-width: 576px) {
+  }
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 992px) {
+  }
+  @media screen and (min-width: 1200px) {
+  }
 `;
 
 const CardLayout = styled.div`
-justify-content: space-around;
-margin-top: 10px;
-margin-bottom: 15px;
-@media screen and (min-width: 576px) {
-  margin-top: 25px;
-  margin-bottom: 10px;
-}
-@media screen and (min-width: 768px) {
-  margin-top: 85px;
-}
-@media screen and (min-width: 992px) {
-  margin-top: 135px;
-}
-@media screen and (min-width: 1200px) {
-  margin-top: 25px;
-}
+  justify-content: space-around;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  @media screen and (min-width: 576px) {
+    margin-top: 25px;
+    margin-bottom: 10px;
+  }
+  @media screen and (min-width: 768px) {
+    margin-top: 85px;
+  }
+  @media screen and (min-width: 992px) {
+    margin-top: 135px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-top: 25px;
+  }
 `;
 
 const ContactButton = styled.button`
-height: auto;
-width: auto;
-background: transparent;
-border: none;
-padding: 0;
-margin: 0;
-font-size: 2rem;
-color: #65ccb8;
+  height: auto;
+  width: auto;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: 2rem;
+  color: #65ccb8;
 `;
 
 const ModalContent = styled.div`

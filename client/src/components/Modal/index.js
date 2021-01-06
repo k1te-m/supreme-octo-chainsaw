@@ -25,10 +25,8 @@ const ModalContainer = styled(motion.div)`
     width: 450px;
   }
   @media screen and (min-width: 768px) {
-    
   }
   @media screen and (min-width: 992px) {
-    
   }
   @media screen and (min-width: 1200px) {
   }

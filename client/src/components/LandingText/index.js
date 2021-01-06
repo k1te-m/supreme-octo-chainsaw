@@ -12,8 +12,17 @@ const LandingText = () => {
         </div>
         <div className="row mt-0 pt-0 mb-5">
           <AboutDescription>
-          My name is <b>Kevin Miller</b>. I am a recent graduate of Northwestern University’s Full Stack Web Development Program with a history of
-          success in financial services. Prior to graduation I worked as a financial professional for nearly six years at Northern Trust Corporation in Chicago, IL. Passionate about learning, I am excited to continue with the challenge of software and web development. I am a detail and goal oriented professional looking to grow and develop skills even further in a junior developr role while adding value to both the organization and their clients. Please browse my portfolio, GitHub and LinkedIn pages. Feel free to contact me here or at any other listed method!
+            My name is <b>Kevin Miller</b>. I am a recent graduate of
+            Northwestern University’s Full Stack Web Development Program with a
+            history of success in financial services. Prior to graduation I
+            worked as a financial professional for nearly six years at Northern
+            Trust Corporation in Chicago, IL. Passionate about learning, I am
+            excited to continue with the challenge of software and web
+            development. I am a detail and goal oriented professional looking to
+            grow and develop skills even further in a junior developr role while
+            adding value to both the organization and their clients. Please
+            browse my portfolio, GitHub and LinkedIn pages. Feel free to contact
+            me here or at any other listed method!
           </AboutDescription>
         </div>
       </HeaderContainer>
@@ -35,9 +44,7 @@ const AboutDescription = styled.p`
     font-size: 26px;
   }
   @media (min-width: 1200px) {
-    
   }
-
 `;
 
 const LandingHeader1 = styled.h1`

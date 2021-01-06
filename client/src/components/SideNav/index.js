@@ -11,7 +11,11 @@ const SideNav = () => {
           </a>
         </li>
         <li className="list-group-item">
-          <a href="https://www.linkedin.com/in/kmiller29/" target="_blank" rel="noreferrer">
+          <a
+            href="https://www.linkedin.com/in/kmiller29/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <i className="fab fa-linkedin"></i>
           </a>
         </li>

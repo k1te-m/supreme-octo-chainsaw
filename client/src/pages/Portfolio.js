@@ -70,50 +70,50 @@ const Portfolio = () => {
   } else {
     return (
       <>
-       
         <NavigationContainer>
           <Navigation />
         </NavigationContainer>
-        
-          <PortfolioContainer className="container-fluid">
-          
-            <AnimatePresence initial={false} custom={direction}>
-              <motion.div
-                key={page}
-                custom={direction}
-                variants={variants}
-                initial="enter"
-                animate="center"
-                exit="exit"
-                transition={{
-                  x: { type: "smooth", stiffness: 400, damping: 30 },
-                  opacity: { duration: 0.2 },
-                }}
-                drag="x"
-                dragConstraints={{ left: 0, right: 0 }}
-                dragElastic={1}
-                onDragEnd={(e, { offset, velocity }) => {
-                  const swipe = swipePower(offset.x, velocity.x);
 
-                  if (swipe < -swipeConfidenceThreshold) {
-                    paginate(1);
-                  } else if (swipe > swipeConfidenceThreshold) {
-                    paginate(-1);
-                  }
-                }}
-              >
-                <RepoCard value={repoState[repoIndex]} id={repoState[repoIndex]._id} className="repo-card" />
-              </motion.div>
-            </AnimatePresence>
-            <div className="next" onClick={() => paginate(1)}>
-              <i className="fas fa-chevron-circle-right" />
-            </div>
-            <div className="prev" onClick={() => paginate(-1)}>
-              <i className="fas fa-chevron-circle-right" />
-            </div>
-            
-          </PortfolioContainer>
-       
+        <PortfolioContainer className="container-fluid">
+          <AnimatePresence initial={false} custom={direction}>
+            <motion.div
+              key={page}
+              custom={direction}
+              variants={variants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{
+                x: { type: "smooth", stiffness: 400, damping: 30 },
+                opacity: { duration: 0.2 },
+              }}
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={1}
+              onDragEnd={(e, { offset, velocity }) => {
+                const swipe = swipePower(offset.x, velocity.x);
+
+                if (swipe < -swipeConfidenceThreshold) {
+                  paginate(1);
+                } else if (swipe > swipeConfidenceThreshold) {
+                  paginate(-1);
+                }
+              }}
+            >
+              <RepoCard
+                value={repoState[repoIndex]}
+                id={repoState[repoIndex]._id}
+                className="repo-card"
+              />
+            </motion.div>
+          </AnimatePresence>
+          <div className="next" onClick={() => paginate(1)}>
+            <i className="fas fa-chevron-circle-right" />
+          </div>
+          <div className="prev" onClick={() => paginate(-1)}>
+            <i className="fas fa-chevron-circle-right" />
+          </div>
+        </PortfolioContainer>
       </>
     );
   }
@@ -126,7 +126,6 @@ const NavigationContainer = styled.div`
   z-index: 9999;
 `;
 
-
 const PortfolioContainer = styled.div`
   width: 100vw;
   height: 100vh;
@@ -136,7 +135,8 @@ const PortfolioContainer = styled.div`
   align-items: center;
   overflow: auto;
   ::-webkit-scrollbar {
-    display: none;}
+    display: none;
+  }
   i {
     color: #f2f2f2;
   }
@@ -157,7 +157,7 @@ const PortfolioContainer = styled.div`
     font-weight: bold;
     font-size: 18px;
     z-index: 2;
-    i{
+    i {
       color: #182628;
     }
   }
@@ -168,14 +168,8 @@ const PortfolioContainer = styled.div`
     left: 10px;
     transform: scale(-1);
   }
-  
-  
 `;
 
-
-
 const LoadContainer = styled.div``;
-
-
 
 export default Portfolio;

@@ -9,7 +9,7 @@ const Alerts = () => {
     alertContext.alerts.length > 0 &&
     alertContext.alerts.map((alert) => (
       <StyledAlert key={alert.id} className={`alert alert-${alert.type}`}>
-        <i className="fas fa-exclamation-circle"/> {alert.message}
+        <i className="fas fa-exclamation-circle" /> {alert.message}
       </StyledAlert>
     ))
   );
@@ -25,9 +25,9 @@ const fadeIn = keyframes`
 `;
 
 const StyledAlert = styled.div`
-    position: fixed;
-    z-index: 9999;
-    animation: ${fadeIn} 1.5s linear;
-`
+  position: fixed;
+  z-index: 9999;
+  animation: ${fadeIn} 1.5s linear;
+`;
 
 export default Alerts;

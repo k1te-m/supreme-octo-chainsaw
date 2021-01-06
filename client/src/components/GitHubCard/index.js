@@ -23,11 +23,10 @@ const Card = styled.div`
   justify-content: center;
   width: 55px;
   height: 55px;
-  border: 2px solid #3B945E;
+  border: 2px solid #3b945e;
   border-radius: 50%;
-  background: #F2F2F2;
+  background: #f2f2f2;
   @media (min-width: 576px) {
-      
   }
   @media (min-width: 768px) {
     width: 100px;
@@ -40,15 +39,14 @@ const Card = styled.div`
   @media (min-width: 1200px) {
     width: 75px;
     height: 75px;
-  } ;
+  }
   i:hover {
     animation: ${pulse} 1s infinite;
   }
   i {
-    color:#182628;
+    color: #182628;
     font-size: 2rem;
     @media (min-width: 576px) {
-      
     }
     @media (min-width: 768px) {
       font-size: 4rem;
@@ -58,7 +56,7 @@ const Card = styled.div`
     }
     @media (min-width: 1200px) {
       font-size: 3rem;
-    } ;
+    }
   }
 `;
 

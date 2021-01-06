@@ -117,7 +117,7 @@ const NavigationContainer = styled.div`
 
 const AboutContainer = styled.div`
   z-index: 0;
-`
+`;
 
 const About = () => {
   const [loadWheel, setLoadWheel] = useState(true);
@@ -139,7 +139,6 @@ const About = () => {
 
   return (
     <>
-      
       <NavigationContainer>
         <Navigation />
       </NavigationContainer>

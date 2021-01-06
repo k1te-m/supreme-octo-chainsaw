@@ -5,36 +5,36 @@ import { motion } from "framer-motion";
 const RepoCard = ({ value }) => {
   const { imageURL, name, description, github, languages, _id } = value;
   return (
-      <CardStyled className="container d-flex">
-        <div className="row">
-          <div className="col p-0 d-flex justify-content-center align-items-center">
-            <a
-              href={`https://www.github.com/${github}/${name}`}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <RepoImg 
-                className="card-img-top" 
-                src={imageURL} 
-                alt={name} 
-                whileHover={{ scale: .95 }}
-                whileTap={{ scale: 0.9 }}
-              />
-            </a>
-          </div>
-          <div className="col d-flex justify-content-center align-items-center">
-            <CardBodyDiv className="card-body">
-              <CardTitle className="card-title">{name}</CardTitle>
-              <CardList className="list-group">
-                {languages.map((language) => {
-                  return <CardListItem key={language}>{language}</CardListItem>;
-                })}
-              </CardList>
-              <CardText className="card-text">{description}</CardText>
-            </CardBodyDiv>
-          </div>
+    <CardStyled className="container d-flex">
+      <div className="row">
+        <div className="col p-0 d-flex justify-content-center align-items-center">
+          <a
+            href={`https://www.github.com/${github}/${name}`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <RepoImg
+              className="card-img-top"
+              src={imageURL}
+              alt={name}
+              whileHover={{ scale: 0.95 }}
+              whileTap={{ scale: 0.9 }}
+            />
+          </a>
         </div>
-      </CardStyled>
+        <div className="col d-flex justify-content-center align-items-center">
+          <CardBodyDiv className="card-body">
+            <CardTitle className="card-title">{name}</CardTitle>
+            <CardList className="list-group">
+              {languages.map((language) => {
+                return <CardListItem key={language}>{language}</CardListItem>;
+              })}
+            </CardList>
+            <CardText className="card-text">{description}</CardText>
+          </CardBodyDiv>
+        </div>
+      </div>
+    </CardStyled>
   );
 };
 
@@ -45,7 +45,8 @@ const CardStyled = styled.div`
   height: 100vh;
   overflow-y: auto;
   ::-webkit-scrollbar {
-    display: none;}
+    display: none;
+  }
   padding: auto;
   margin: auto;
   padding-top: 4rem;
@@ -72,13 +73,12 @@ const RepoImg = styled(motion.img)`
   padding-top: 0px;
   border: 2px solid #3b945e;
   border-radius: 20px;
-  
+
   @media (min-width: 576px) {
     width: 500px;
   }
   @media (min-width: 768px) {
     width: 698px;
-    
   }
   @media (min-width: 992px) {
     width: 948px;
@@ -98,7 +98,7 @@ const CardList = styled.ul`
   justify-content: center;
   overflow: hidden;
   width: 350px;
-`
+`;
 const CardListItem = styled.li`
   font-size: 10.5px;
   display: inline;
@@ -119,13 +119,13 @@ const CardListItem = styled.li`
   @media (min-width: 1200px) {
     color: #182628;
   }
-`
+`;
 
 const CardBodyDiv = styled.div`
   text-align: center;
   align-content: center;
   padding-top: 0px;
-`
+`;
 
 const CardTitle = styled.h5`
   text-align: center;
@@ -142,10 +142,10 @@ const CardTitle = styled.h5`
   }
   @media (min-width: 1200px) {
   }
-`
+`;
 
 const CardText = styled.div`
-  color: #F2F2F2;
+  color: #f2f2f2;
   font-size: 14px;
   @media (min-width: 576px) {
     font-size: 16px;
@@ -157,6 +157,6 @@ const CardText = styled.div`
   }
   @media (min-width: 1200px) {
   }
-`
+`;
 
 export default RepoCard;

@@ -10,8 +10,8 @@ const ContactCard = () => {
   const flexCenter = {
     display: "flex",
     alignItems: "center",
-    justifyContent: "center"
-  }
+    justifyContent: "center",
+  };
   return (
     <Card className="card">
       <Link to="/contact" style={centered}>
@@ -102,7 +102,7 @@ const ContactImg = styled.img`
 
 const CardTitle = styled.h1`
   font-size: 14px;
-  color: #F2F2F2;
+  color: #f2f2f2;
   @media (min-width: 576px) {
     font-size: 18px;
   }
@@ -115,6 +115,5 @@ const CardTitle = styled.h1`
   @media (min-width: 1200px) {
   } ;
 `;
-
 
 export default ContactCard;
