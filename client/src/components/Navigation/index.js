@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import AnimatedNav from "../AnimatedNav";
 import { motion } from "framer-motion";
