@@ -32,7 +32,7 @@ const Portfolio = () => {
   const variants = {
     enter: (direction) => {
       return {
-        x: direction > 0 ? 5000 : -5000,
+        x: direction > 0 ? 10000 : -10000,
         opacity: 0,
       };
     },
@@ -70,19 +70,13 @@ const Portfolio = () => {
   } else {
     return (
       <>
-        {/* <SideNavContainer>
-          <SideNav />
-        </SideNavContainer> */}
+       
         <NavigationContainer>
           <Navigation />
         </NavigationContainer>
-        {/* <PortfolioWrapper> */}
+        
           <PortfolioContainer className="container-fluid">
-            {/* <PortfolioRow className="row mt-3 mb-3">
-              <div className="col">
-                <PortfolioHeader>Portfolio</PortfolioHeader>
-              </div>
-            </PortfolioRow> */}
+          
             <AnimatePresence initial={false} custom={direction}>
               <motion.div
                 key={page}
@@ -117,13 +111,9 @@ const Portfolio = () => {
             <div className="prev" onClick={() => paginate(-1)}>
               <i className="fas fa-chevron-circle-right" />
             </div>
-            {/* <PortfolioRow className="row mt-0 mb-5 row-cols-3 justify-content-center">
-              {repoState.map((repo) => {
-                return <RepoCard value={repo} key={repo._id} />;
-              })}
-            </PortfolioRow> */}
+            
           </PortfolioContainer>
-        {/* </PortfolioWrapper> */}
+       
       </>
     );
   }
@@ -136,13 +126,6 @@ const NavigationContainer = styled.div`
   z-index: 9999;
 `;
 
-const PortfolioWrapper = styled.div`
-  // position: relative;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-  // overflow: hidden;
-`;
 
 const PortfolioContainer = styled.div`
   width: 100vw;
@@ -151,6 +134,9 @@ const PortfolioContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: auto;
+  ::-webkit-scrollbar {
+    display: none;}
   i {
     color: #f2f2f2;
   }
@@ -158,7 +144,8 @@ const PortfolioContainer = styled.div`
   .prev {
     top: calc(50% - 20px);
     position: absolute;
-    background: white;
+    background: #f2f2f2;
+    border: 1px solid #3b945e;
     border-radius: 30px;
     width: 40px;
     height: 40px;
@@ -170,6 +157,9 @@ const PortfolioContainer = styled.div`
     font-weight: bold;
     font-size: 18px;
     z-index: 2;
+    i{
+      color: #182628;
+    }
   }
   .next {
     right: 10px;
@@ -182,29 +172,10 @@ const PortfolioContainer = styled.div`
   
 `;
 
-const PortfolioRow = styled.div`
-  margin-top: 11%;
-`;
+
 
 const LoadContainer = styled.div``;
 
-// const SideNavContainer = styled.div`
-//   i{
-//     color: #182628;
-//   }
-//   @media (min-width: 576px) {
-//   }
-//   @media (min-width: 768px) {
-//   }
-//   @media (min-width: 992px) {
-//   }
-//   @media (min-width: 1200px) {
-//   }
-// `
 
-const PortfolioHeader = styled.h1`
-  color: #f2f2f2;
-  border-bottom: 0.5px solid #3b945e;
-`;
 
 export default Portfolio;
