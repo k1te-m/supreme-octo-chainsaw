@@ -19,6 +19,9 @@ body{
     @media (min-width: 1200px) {
         background-position: top;
     } ;
+    @media (min-height: 1560px) {
+        background-position: bottom;
+    }
 }
 `;
 
