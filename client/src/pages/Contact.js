@@ -123,7 +123,7 @@ const Contact = () => {
               </div>
               <div className="col">
                 <ImgContainer>
-                  <img src="../images/cooper1.jpg" />
+                  <img src="../images/cooper1.jpg" alt="Cooper" />
                 </ImgContainer>
               </div>
             </div>
@@ -149,7 +149,7 @@ const Contact = () => {
               </div>
               <div className="col-5">
                 <ImgContainer>
-                  <img src="../images/me2.jpg" />
+                  <img src="../images/me2.jpg" alt="Kevin" />
                 </ImgContainer>
               </div>
             </div>
@@ -290,6 +290,9 @@ const ModalContent = styled.div`
     justify-content: center;
     width: 100%;
     padding: 0px;
+  }
+  h1 {
+    color: #57ba98;
   }
   h3 {
     color: #f2f2f2;
