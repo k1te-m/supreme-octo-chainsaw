@@ -32,7 +32,7 @@ const Portfolio = () => {
   const variants = {
     enter: (direction) => {
       return {
-        x: direction > 0 ? 10000 : -10000,
+        x: direction > 0 ? 5000 : -5000,
         opacity: 0,
       };
     },
@@ -44,7 +44,7 @@ const Portfolio = () => {
     exit: (direction) => {
       return {
         zIndex: 0,
-        x: direction < 0 ? 1000 : -1000,
+        x: direction < 0 ? 5000 : -5000,
         opacity: 0,
       };
     },
