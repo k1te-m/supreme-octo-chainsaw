@@ -126,7 +126,7 @@ const About = () => {
     window.scrollTo(0, 0);
     setTimeout(() => {
       setLoadWheel(false);
-    }, 2000);
+    }, 1000);
   }, []);
 
   if (loadWheel === true) {
