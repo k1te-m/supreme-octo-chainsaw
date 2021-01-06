@@ -1,81 +1,91 @@
 import React from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const RepoCard = ({ value }) => {
-  const { imageURL, name, description, github, languages } = value;
+  const { imageURL, name, description, github, languages, _id } = value;
   return (
-      <CardStyled className="card">
-        <a
-          href={`https://www.github.com/${github}/${name}`}
-          target="_blank"
-          rel="noreferrer"
-        >
-          <RepoImg className="card-img-top" src={imageURL} alt={name} />
-        </a>
-        <CardBodyDiv className="card-body">
-          <CardTitle className="card-title">{name}</CardTitle>
-          <CardList className="list-group">
-            {languages.map((language) => {
-              return <CardListItem>{language}</CardListItem>;
-            })}
-          </CardList>
-          <CardText className="card-text">{description}</CardText>
-          {/* <a
-            href={`https://www.github.com/${github}/${name}`}
-            className="btn btn-warning"
-            target="_blank"
-            rel="noreferrer"
-          >
-            GitHub Repository
-          </a> */}
-        </CardBodyDiv>
+      <CardStyled className="container d-flex">
+        <div className="row">
+          <div className="col p-0 d-flex justify-content-center align-items-center">
+            <a
+              href={`https://www.github.com/${github}/${name}`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <RepoImg 
+                className="card-img-top" 
+                src={imageURL} 
+                alt={name} 
+                whileHover={{ scale: .95 }}
+                whileTap={{ scale: 0.9 }}
+              />
+            </a>
+          </div>
+          <div className="col d-flex justify-content-center align-items-center">
+            <CardBodyDiv className="card-body">
+              <CardTitle className="card-title">{name}</CardTitle>
+              <CardList className="list-group">
+                {languages.map((language) => {
+                  return <CardListItem key={language}>{language}</CardListItem>;
+                })}
+              </CardList>
+              <CardText className="card-text">{description}</CardText>
+            </CardBodyDiv>
+          </div>
+        </div>
       </CardStyled>
   );
 };
 
 const CardStyled = styled.div`
-  width: 350px;
-  height: auto;
-  align-items: center;
-  margin: 0 auto;
-  float: none;
-  justify-content: center;
-  margin-bottom: 10px;
+  max-width: 100%;
+  max-height: 100%;
+  width: 348px;
+  height: 100vh;
   overflow-y: auto;
-  padding-top: 0px;
-  background-color: #182628;
-  border: 1px solid #3B945E;
+  ::-webkit-scrollbar {
+    display: none;}
+  padding: auto;
+  margin: auto;
+  padding-top: 4rem;
+  background-color: transparent;
   @media (min-width: 576px) {
-    width: 550px;
+    width: 574px;
   }
   @media (min-width: 768px) {
-    width: 700px;
+    width: 766px;
   }
   @media (min-width: 992px) {
-    width: 950px;
+    width: 990px;
   }
   @media (min-width: 1200px) {
-    width: 500px;
+    width: 1198px;
   }
 `;
 
-const RepoImg = styled.img`
+const RepoImg = styled(motion.img)`
   width: 348px;
   height: auto;
+  object-fit: cover;
   margin-top: 0px;
   padding-top: 0px;
-  object-fit: cover;
+  border: 2px solid #3b945e;
+  border-radius: 20px;
+  
   @media (min-width: 576px) {
-    width: 548px;
+    width: 500px;
   }
   @media (min-width: 768px) {
     width: 698px;
+    
   }
   @media (min-width: 992px) {
     width: 948px;
   }
   @media (min-width: 1200px) {
-    width: 498px;
+    width: 500px;
+    margin-right: 100px;
   }
 `;
 
@@ -88,7 +98,6 @@ const CardList = styled.ul`
   justify-content: center;
   overflow: hidden;
   width: 350px;
-  
 `
 const CardListItem = styled.li`
   font-size: 10.5px;
@@ -98,7 +107,7 @@ const CardListItem = styled.li`
   padding: auto;
   margin: auto;
   padding-left: 0px;
-  color: #3B945E;
+  color: #3b945e;
   @media (min-width: 576px) {
     font-size: 13px;
   }
@@ -108,19 +117,21 @@ const CardListItem = styled.li`
   @media (min-width: 992px) {
   }
   @media (min-width: 1200px) {
+    color: #182628;
   }
 `
 
 const CardBodyDiv = styled.div`
   text-align: center;
   align-content: center;
+  padding-top: 0px;
 `
 
 const CardTitle = styled.h5`
   text-align: center;
-  color: #57BA98;
+  color: #f2f2f2;
   margin-bottom: 0px;
-  border-bottom: 1px solid #65CCB8;
+  border-bottom: 1px solid #3b945e;
   @media (min-width: 576px) {
     font-size: 25px;
   }
