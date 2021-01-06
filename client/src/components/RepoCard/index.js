@@ -125,6 +125,7 @@ const CardBodyDiv = styled.div`
   text-align: center;
   align-content: center;
   padding-top: 0px;
+  height: 300px;
 `;
 
 const CardTitle = styled.h5`
