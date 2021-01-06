@@ -73,6 +73,10 @@ const Portfolio = () => {
         <NavigationContainer>
           <Navigation />
         </NavigationContainer>
+        
+        <SideNavContainer>
+          <SideNav />
+        </SideNavContainer>
 
         <PortfolioContainer className="container-fluid">
           <AnimatePresence initial={false} custom={direction}>
@@ -118,6 +122,16 @@ const Portfolio = () => {
     );
   }
 };
+
+const SideNavContainer = styled.div`
+  display: none;
+  @media (min-width: 576px) {
+    
+  }
+  @media (min-width: 1200px) {
+    display: block;
+  }
+`;
 
 const NavigationContainer = styled.div`
   position: absolute;
