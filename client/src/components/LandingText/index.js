@@ -12,14 +12,8 @@ const LandingText = () => {
         </div>
         <div className="row mt-0 pt-0 mb-5">
           <AboutDescription>
-            Pellentesque mollis erat lectus, a tempus ipsum consectetur quis.
-            Quisque mollis lorem in felis semper, in pulvinar lacus gravida.
-            Phasellus quis nibh pharetra ex tristique suscipit id a ex. Cras
-            vitae augue eget velit bibendum rutrum vitae sed ex. Duis ex sem,
-            consectetur et nunc ut, consequat pharetra dui. In placerat arcu
-            vitae luctus mattis. Suspendisse nec nisi quis urna viverra feugiat
-            at sed dui. Aliquam venenatis congue accumsan. Etiam ut nunc
-            tincidunt, efficitur ante sed, sollicitudin nibh.
+          My name is <b>Kevin Miller</b>. I am a recent graduate of Northwestern University’s Full Stack Web Development Program with a history of
+          success in financial services. Prior to graduation I worked as a financial professional for nearly six years at Northern Trust Corporation in Chicago, IL. Passionate about learning, I am excited to continue with the challenge of software and web development. I am a detail and goal oriented professional looking to grow and develop skills even further in a junior developr role while adding value to both the organization and their clients. Please browse my portfolio, GitHub and LinkedIn pages. Feel free to contact me here or at any other listed method!
           </AboutDescription>
         </div>
       </HeaderContainer>
