@@ -3,13 +3,13 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 const RepoCard = ({ value }) => {
-  const { imageURL, name, description, github, languages, _id } = value;
+  const { imageURL, name, description, github, languages, _id, deployedLink } = value;
   return (
     <CardStyled className="container d-flex">
       <div className="row">
         <div className="col p-0 d-flex justify-content-center align-items-center">
           <a
-            href={`https://www.github.com/${github}/${name}`}
+            href={deployedLink}
             target="_blank"
             rel="noreferrer"
           >
