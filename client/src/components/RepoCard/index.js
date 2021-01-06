@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 const RepoCard = ({ value }) => {
-  const { imageURL, name, description, github, languages, _id, deployedLink } = value;
+  const { imageURL, name, description, languages, deployedLink } = value;
   return (
     <CardStyled className="container d-flex">
       <div className="row">
