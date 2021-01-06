@@ -112,7 +112,12 @@ const NavigationContainer = styled.div`
   position: fixed;
   top: 0%;
   right: 0%;
+  z-index: 1;
 `;
+
+const AboutContainer = styled.div`
+  z-index: 0;
+`
 
 const About = () => {
   const [loadWheel, setLoadWheel] = useState(true);
@@ -134,19 +139,22 @@ const About = () => {
 
   return (
     <>
-      <SideNav />
+      
       <NavigationContainer>
         <Navigation />
       </NavigationContainer>
-      <SlideInUpDiv>
-        <LandingText />
-      </SlideInUpDiv>
-      <SlideInRightDiv>
-        <PortfolioCard />
-      </SlideInRightDiv>
-      <SlideInLeftDiv>
-        <ContactCard />
-      </SlideInLeftDiv>
+      <AboutContainer className="container">
+        <SideNav />
+        <SlideInUpDiv>
+          <LandingText />
+        </SlideInUpDiv>
+        <SlideInRightDiv>
+          <PortfolioCard />
+        </SlideInRightDiv>
+        <SlideInLeftDiv>
+          <ContactCard />
+        </SlideInLeftDiv>
+      </AboutContainer>
     </>
   );
 };
