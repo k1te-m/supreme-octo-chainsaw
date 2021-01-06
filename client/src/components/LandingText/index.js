@@ -19,7 +19,7 @@ const LandingText = () => {
             Trust Corporation in Chicago, IL. Passionate about learning, I am
             excited to continue with the challenge of software and web
             development. I am a detail and goal oriented professional looking to
-            grow and develop skills even further in a junior developr role while
+            grow and develop skills even further in a junior developer role while
             adding value to both the organization and their clients. Please
             browse my portfolio, GitHub and LinkedIn pages. Feel free to contact
             me here or at any other listed method!
