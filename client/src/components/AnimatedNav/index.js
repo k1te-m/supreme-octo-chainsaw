@@ -13,7 +13,7 @@ const Overlay = styled(motion.div)`
 const NavigationContainer = styled(motion.div)`
   width: 65%;
   height: auto;
-  padding: 10px 35px 35px 35px;
+  padding: 10px 10px 35px 10px;
   background-color: #65ccb8;
   position: absolute;
   top: 50%;
