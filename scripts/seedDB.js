@@ -12,7 +12,7 @@ const repoSeed = [
         github: "k1te-m",
         deployedLink: "https://gentle-atoll-92825.herokuapp.com/",
         imageURL: "../images/explorer.PNG",
-        description: "This is a MERN stack web game that is designed to take the user on an educational journey while interacting with NASA information to gain explorative knowledge. Gain credits as rewards for answering correct quiz questions while transversing the universe. Purchase and upgrade ships throught your journey.",
+        description: "MERN stack web game that is designed to take the user on an educational journey while interacting with NASA information to gain explorative knowledge. Gain credits as rewards for answering correct quiz questions while transversing the universe. Purchase and upgrade ships throught your journey.",
         languages: ["React.js", "MongoDB", "Express", "Node.js", "Bootstrap"],
     },
     {
@@ -20,7 +20,7 @@ const repoSeed = [
         github: "k1te-m",
         deployedLink: "https://fierce-earth-38835.herokuapp.com/",
         imageURL: "../images/limitelec.PNG",
-        description: "This is as mock ecommerce site. Product data is stored in a MySQL database, and the users can browse in a variety of ways. Users can optionally create an account, and log in and log out. While logged in, they can view their member information.",
+        description: "A mock ecommerce electronics site. Product data is stored in a MySQL database, and the users can browse in a variety of ways. Users can optionally create an account, and log in and log out. While logged in, they can view their member information.",
         languages: ["jQuery", "Handlebars", "MySQL", "Express", "Node.js", "Bootstrap",],
     },
     {
